@@ -519,7 +519,7 @@ function initTerminalEasterEgg() {
     if (!terminalOverlay) return;
 
     document.addEventListener('keydown', (e) => {
-        if (e.key === '\`' || (e.ctrlKey && e.key === '~')) {
+        if (e.key === '`' || (e.ctrlKey && e.key === '~')) {
             e.preventDefault();
             terminalOverlay.classList.toggle('active');
             if (terminalOverlay.classList.contains('active')) {
@@ -539,22 +539,22 @@ function initTerminalEasterEgg() {
             const command = terminalInput.value.trim().toLowerCase();
             terminalInput.value = '';
             
-            printLine(\`user@guest:~$ \${command}\`, '#cdd6f4');
+            printLine(`user@guest:~$ ${command}`, '#cdd6f4');
 
             if (command === 'help') {
                 printLine('Available commands: whoami, skills, projects, clear, exit', '#a6e3a1');
             } else if (command === 'whoami') {
-                printLine('Imasha Karunathilaka\\nSoftware Engineer & Strategist\\nBuilding digital experiences that drive impact.', '#89b4fa');
+                printLine('Imasha Karunathilaka\nSoftware Engineer & Strategist\nBuilding digital experiences that drive impact.', '#89b4fa');
             } else if (command === 'skills') {
                 printLine('[JS, React, Node, Python, MySQL, Firebase, Figma, Strategy]', '#f9e2af');
             } else if (command === 'projects') {
-                printLine('Loading projects from matrix... Done.\\n- TMS (Task Management System)\\n- AquaGrow\\n- SL Delivery Analytics', '#cba6f7');
+                printLine('Loading projects from matrix... Done.\n- TMS (Task Management System)\n- AquaGrow\n- SL Delivery Analytics', '#cba6f7');
             } else if (command === 'clear') {
                 terminalBody.innerHTML = '<div class="terminal-line"><span class="terminal-prompt">user@guest:~$</span> <span class="terminal-text">Terminal cleared.</span></div>';
             } else if (command === 'exit') {
                 terminalOverlay.classList.remove('active');
             } else if (command !== '') {
-                printLine(\`Command not found: \${command}. Type 'help' for available commands.\`, '#f38ba8');
+                printLine(`Command not found: ${command}. Type 'help' for available commands.`, '#f38ba8');
             }
             
             terminalBody.scrollTop = terminalBody.scrollHeight;
