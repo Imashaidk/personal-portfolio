@@ -329,7 +329,20 @@ async function fetchGitHubProjects() {
             
             // Format language tag if exists
             const langTag = repo.language ? `<span>${repo.language}</span>` : '';
-            const desc = repo.description || 'A custom GitHub repository project.';
+            
+            // Professional custom descriptions mapping for known repositories without descriptions
+            const professionalDescriptions = {
+                'SL-delivery-analytics': 'A comprehensive data pipeline platform analyzing transit times, delivery success rates, and route optimizations.',
+                'ecommerce-app': 'A modern e-commerce web application featuring state management, dynamic carts, and responsive UI components.',
+                'TimeFlow': 'A sleek productivity and time-tracking application designed for workflow optimization and task management.',
+                'personal-portfolio': 'My professional developer portfolio showcasing my expertise in full-stack engineering, databases, and UI design.',
+                'task-management-system': 'A collaborative task management dashboard tailored for agile teams with real-time updates and interactive interfaces.'
+            };
+            
+            // Fallback chain: GitHub desc -> Professional Custom -> Generic
+            const desc = repo.description 
+                || professionalDescriptions[repo.name] 
+                || 'An experimental software project exploring new technologies and architectural patterns.';
             
             card.innerHTML = `
                 <div class="project-img-wrapper">
