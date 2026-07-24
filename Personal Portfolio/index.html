@@ -9,10 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="custom-cursor" id="custom-cursor"></div>
 
     <!-- Background decorative blur blobs -->
     <div class="blob blob-1"></div>
@@ -72,7 +75,8 @@
                     <span class="hero-subtitle">Available for Opportunities</span>
                     <h1 class="hero-title">
                         Building Digital <br>
-                        <span class="gradient-text">Experiences</span> That Drive Impact.
+                        <span class="gradient-text typing-text">Experiences</span><span class="typing-cursor">|</span> <br>
+                        That Drive Impact.
                     </h1>
                     <p class="hero-description">
                         Hi, I'm Imasha Karunathilaka. I am a software engineer and strategist specializing in building responsive web applications, robust database systems, and go-to-market strategies.
@@ -305,6 +309,15 @@
                     <button class="filter-btn" data-filter="system">Systems & Databases</button>
                     <button class="filter-btn" data-filter="strategy">Marketing & Strategy</button>
                     <button class="filter-btn" data-filter="github">GitHub Repos</button>
+                </div>
+
+                <div class="github-stats-container reveal hidden" id="github-stats-container">
+                    <div class="glass-card github-stats-card">
+                        <h3 class="stats-title">GitHub Language Distribution</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="githubStatsChart"></canvas>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="projects-grid reveal">
@@ -663,6 +676,27 @@
             </div>
         </div>
     </footer>
+
+    <!-- Interactive Terminal (Easter Egg) -->
+    <div class="terminal-overlay hidden" id="terminal-overlay">
+        <div class="terminal-window glass-card">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="btn-close" id="terminal-close"></span>
+                    <span class="btn-minimize"></span>
+                    <span class="btn-maximize"></span>
+                </div>
+                <div class="terminal-title">imasha@portfolio:~</div>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div class="terminal-line"><span class="terminal-prompt">user@guest:~$</span> <span class="terminal-text">Welcome to Imasha's interactive terminal. Type 'help' to see available commands.</span></div>
+            </div>
+            <div class="terminal-input-line">
+                <span class="terminal-prompt">user@guest:~$</span>
+                <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" autofocus>
+            </div>
+        </div>
+    </div>
 
     <!-- Custom JS -->
     <script src="js/app.js"></script>

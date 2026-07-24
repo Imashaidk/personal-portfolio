@@ -128,6 +128,15 @@ function initProjectFilters() {
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
+            const statsContainer = document.getElementById('github-stats-container');
+            if (statsContainer) {
+                if (filterValue === 'github') {
+                    statsContainer.classList.remove('hidden');
+                } else {
+                    statsContainer.classList.add('hidden');
+                }
+            }
+
             projectCards.forEach(card => {
                 const category = card.getAttribute('data-category');
 
@@ -419,7 +428,191 @@ async function fetchGitHubProjects() {
             projectsGrid.appendChild(card);
         });
         
+        if (typeof renderGitHubStats === 'function') {
+            renderGitHubStats(validRepos);
+        }
+        
     } catch (error) {
         console.error('Error loading GitHub projects:', error);
     }
+}
+
+/* ==========================================================================
+   Creative Additions
+   ========================================================================== */
+
+document.addEventListener('DOMContentLoaded', () => {
+    initCustomCursor();
+    initTypingEffect();
+    initTerminalEasterEgg();
+});
+
+function initCustomCursor() {
+    const cursor = document.getElementById('custom-cursor');
+    if (!cursor) return;
+
+    if (window.matchMedia("(pointer: coarse)").matches) return;
+
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    const addHover = () => cursor.classList.add('hovering');
+    const removeHover = () => cursor.classList.remove('hovering');
+
+    document.body.addEventListener('mouseover', (e) => {
+        const target = e.target.closest('a, button, input, textarea, .project-card, .terminal-window, .filter-btn, .theme-btn');
+        if (target) addHover();
+    });
+    
+    document.body.addEventListener('mouseout', (e) => {
+        const target = e.target.closest('a, button, input, textarea, .project-card, .terminal-window, .filter-btn, .theme-btn');
+        if (target) removeHover();
+    });
+}
+
+function initTypingEffect() {
+    const typingText = document.querySelector('.typing-text');
+    if (!typingText) return;
+
+    const words = ['Experiences', 'Web Applications', 'Database Architectures', 'GTM Strategies'];
+    let wordIndex = 0;
+    let charIndex = words[0].length;
+    let isDeleting = true;
+    let typeSpeed = 100;
+
+    function type() {
+        const currentWord = words[wordIndex];
+        
+        if (isDeleting) {
+            typingText.textContent = currentWord.substring(0, charIndex - 1);
+            charIndex--;
+            typeSpeed = 50;
+        } else {
+            typingText.textContent = currentWord.substring(0, charIndex + 1);
+            charIndex++;
+            typeSpeed = 100;
+        }
+
+        if (!isDeleting && charIndex === currentWord.length) {
+            typeSpeed = 2000;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            typeSpeed = 500;
+        }
+
+        setTimeout(type, typeSpeed);
+    }
+
+    setTimeout(type, 2000);
+}
+
+function initTerminalEasterEgg() {
+    const terminalOverlay = document.getElementById('terminal-overlay');
+    const terminalClose = document.getElementById('terminal-close');
+    const terminalInput = document.getElementById('terminal-input');
+    const terminalBody = document.getElementById('terminal-body');
+    
+    if (!terminalOverlay) return;
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === '\`' || (e.ctrlKey && e.key === '~')) {
+            e.preventDefault();
+            terminalOverlay.classList.toggle('active');
+            if (terminalOverlay.classList.contains('active')) {
+                setTimeout(() => terminalInput.focus(), 100);
+            }
+        }
+    });
+
+    terminalClose.addEventListener('click', () => terminalOverlay.classList.remove('active'));
+    
+    terminalOverlay.addEventListener('click', (e) => {
+        if (e.target === terminalOverlay) terminalOverlay.classList.remove('active');
+    });
+
+    terminalInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            const command = terminalInput.value.trim().toLowerCase();
+            terminalInput.value = '';
+            
+            printLine(\`user@guest:~$ \${command}\`, '#cdd6f4');
+
+            if (command === 'help') {
+                printLine('Available commands: whoami, skills, projects, clear, exit', '#a6e3a1');
+            } else if (command === 'whoami') {
+                printLine('Imasha Karunathilaka\\nSoftware Engineer & Strategist\\nBuilding digital experiences that drive impact.', '#89b4fa');
+            } else if (command === 'skills') {
+                printLine('[JS, React, Node, Python, MySQL, Firebase, Figma, Strategy]', '#f9e2af');
+            } else if (command === 'projects') {
+                printLine('Loading projects from matrix... Done.\\n- TMS (Task Management System)\\n- AquaGrow\\n- SL Delivery Analytics', '#cba6f7');
+            } else if (command === 'clear') {
+                terminalBody.innerHTML = '<div class="terminal-line"><span class="terminal-prompt">user@guest:~$</span> <span class="terminal-text">Terminal cleared.</span></div>';
+            } else if (command === 'exit') {
+                terminalOverlay.classList.remove('active');
+            } else if (command !== '') {
+                printLine(\`Command not found: \${command}. Type 'help' for available commands.\`, '#f38ba8');
+            }
+            
+            terminalBody.scrollTop = terminalBody.scrollHeight;
+        }
+    });
+
+    function printLine(text, color) {
+        const line = document.createElement('div');
+        line.className = 'terminal-line';
+        line.style.color = color;
+        line.textContent = text;
+        terminalBody.appendChild(line);
+    }
+}
+
+function renderGitHubStats(repos) {
+    const container = document.getElementById('github-stats-container');
+    const ctx = document.getElementById('githubStatsChart');
+    if (!container || !ctx || typeof Chart === 'undefined') return;
+
+    const langCounts = {};
+    repos.forEach(repo => {
+        if (repo.language) {
+            langCounts[repo.language] = (langCounts[repo.language] || 0) + 1;
+        }
+    });
+
+    const labels = Object.keys(langCounts);
+    const data = Object.values(langCounts);
+    
+    if (labels.length === 0) return;
+
+    const colors = ['#8b5cf6', '#3b82f6', '#10b981', '#f59e0b', '#ec4899', '#06b6d4'];
+
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: labels,
+            datasets: [{
+                data: data,
+                backgroundColor: colors.slice(0, labels.length),
+                borderWidth: 0,
+                hoverOffset: 10
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        color: 'var(--text-secondary)',
+                        font: { family: "'Inter', sans-serif" }
+                    }
+                }
+            },
+            cutout: '70%'
+        }
+    });
 }

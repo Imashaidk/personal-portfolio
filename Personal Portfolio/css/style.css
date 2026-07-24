@@ -1370,3 +1370,186 @@ textarea.form-input {
     background-color: var(--bg-primary);
     border-color: var(--accent-secondary);
 }
+
+/* ==========================================================================
+   Creative Additions (Cursor, Terminal, Typing, Chart)
+   ========================================================================== */
+
+/* 1. Custom Magnetic Cursor */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--accent-primary);
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+.custom-cursor.hovering {
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-secondary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    body, a, button, input, textarea, .project-card, .terminal-window {
+        cursor: none !important;
+    }
+}
+@media (hover: none) {
+    .custom-cursor {
+        display: none;
+    }
+}
+
+/* 2. Typing Effect */
+.typing-cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: var(--text-primary);
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* 3. Terminal Easter Egg */
+.terminal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-normal);
+}
+
+.terminal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.terminal-window {
+    width: 90%;
+    max-width: 800px;
+    height: 60vh;
+    background: rgba(15, 15, 25, 0.95);
+    border: 1px solid var(--border-glass);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transform: translateY(20px);
+    transition: transform var(--transition-normal);
+}
+
+.terminal-overlay.active .terminal-window {
+    transform: translateY(0);
+}
+
+.terminal-header {
+    background: #1e1e2e;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #313244;
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-close, .btn-minimize, .btn-maximize {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.btn-close { background: #f38ba8; }
+.btn-minimize { background: #f9e2af; }
+.btn-maximize { background: #a6e3a1; }
+
+.terminal-title {
+    flex-grow: 1;
+    text-align: center;
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: #bac2de;
+}
+
+.terminal-body {
+    flex-grow: 1;
+    padding: 16px;
+    overflow-y: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    color: #cdd6f4;
+}
+
+.terminal-line {
+    margin-bottom: 8px;
+    white-space: pre-wrap;
+}
+
+.terminal-prompt {
+    color: #a6e3a1;
+    margin-right: 8px;
+}
+
+.terminal-input-line {
+    display: flex;
+    padding: 0 16px 16px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+}
+
+.terminal-input {
+    background: transparent;
+    border: none;
+    color: #cdd6f4;
+    outline: none;
+    flex-grow: 1;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* 4. Chart Container */
+.github-stats-card {
+    padding: 24px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.chart-wrapper {
+    width: 250px;
+    height: 250px;
+    position: relative;
+}
