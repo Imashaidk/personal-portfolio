@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Personal Portfolio Website of Imasha Karunathilaka - Creative Developer, Database Engineer & Strategist. Discover my work, skills, and journey.">
+    <title>Imasha Karunathilaka | Developer & Strategist</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Background decorative blur blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo" id="nav-logo">
+                <span class="logo-accent">Imasha</span>Karunathilaka
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-btn" id="theme-toggle" aria-label="Toggle theme">
+                    <!-- Moon Icon (Dark Mode active symbol) -->
+                    <svg class="icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <!-- Sun Icon (Light Mode active symbol) -->
+                    <svg class="icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <button class="menu-toggle-btn" id="menu-toggle" aria-label="Toggle Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="section hero-section" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content reveal">
+                    <span class="hero-subtitle">Available for Opportunities</span>
+                    <h1 class="hero-title">
+                        Building Digital <br>
+                        <span class="gradient-text">Experiences</span> That Drive Impact.
+                    </h1>
+                    <p class="hero-description">
+                        Hi, I'm Imasha Karunathilaka. I am a software engineer and strategist specializing in building responsive web applications, robust database systems, and go-to-market strategies.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-visual reveal">
+                    <div class="hero-card-wrapper">
+                        <!-- Decorative Glass Cards -->
+                        <div class="glass-card visual-card main-card">
+                            <div class="card-header">
+                                <div class="card-dots">
+                                    <span class="dot dot-red"></span>
+                                    <span class="dot dot-yellow"></span>
+                                    <span class="dot dot-green"></span>
+                                </div>
+                                <span class="card-title">developer.js</span>
+                            </div>
+                            <div class="card-body">
+                                <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+    name: <span class="string">'Imasha Karunathilaka'</span>,
+    skills: [<span class="string">'JS'</span>, <span class="string">'React'</span>, <span class="string">'MySQL'</span>, <span class="string">'Firebase'</span>],
+    focus: <span class="string">'Clean code & Strategy'</span>
+};</code></pre>
+                            </div>
+                        </div>
+                        <div class="glass-card visual-card overlay-card-1">
+                            <div class="icon-box purple-gradient">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                    <polyline points="2 17 12 22 22 17"></polyline>
+                                    <polyline points="2 12 12 17 22 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="info">
+                                <span class="title">Web Developer</span>
+                                <span class="subtitle">React, Firebase, HTML/CSS/JS</span>
+                            </div>
+                        </div>
+                        <div class="glass-card visual-card overlay-card-2">
+                            <div class="icon-box cyan-gradient">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                            </div>
+                            <div class="info">
+                                <span class="title">Database & Systems</span>
+                                <span class="subtitle">MySQL, ER Designs, UML</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">My Philosophy & Background</h2>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-info reveal">
+                        <p class="about-p text-lead">
+                            I am a software developer and analytical thinker who designs systems from the database layer all the way up to user interfaces and marketing strategies.
+                        </p>
+                        <p class="about-p">
+                            My expertise covers full-stack web applications, database schema designs, UML structural mapping, and business analysis. I focus on developing code bases that are clean, modular, and optimized for speed and user experience.
+                        </p>
+                        <p class="about-p">
+                            Whether designing a five-page responsive dashboard or formulating go-to-market strategies for smart systems, I strive to make sure that logical architectures and usability go hand-in-hand.
+                        </p>
+                    </div>
+                    
+                    <div class="about-stats reveal">
+                        <div class="stat-card glass-card">
+                            <h3 class="stat-number">3+</h3>
+                            <p class="stat-label">Years of Experience</p>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <h3 class="stat-number">20+</h3>
+                            <p class="stat-label">Projects Completed</p>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <h3 class="stat-number">99%</h3>
+                            <p class="stat-label">Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section skills-section" id="skills">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Skills & Stack</span>
+                    <h2 class="section-title">Professional Toolkit</h2>
+                </div>
+
+                <div class="skills-tabs reveal">
+                    <button class="tab-btn active" data-tab="frontend">Frontend</button>
+                    <button class="tab-btn" data-tab="backend">Backend & DB</button>
+                    <button class="tab-btn" data-tab="tools">Design & Strategy</button>
+                </div>
+
+                <div class="skills-content-container reveal">
+                    <!-- Frontend Content -->
+                    <div class="tab-content active" id="frontend">
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React.js & React ecosystem</span>
+                                    <span class="skill-val">88%</span>
+                                </div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5 / CSS3 / Vanilla JS</span>
+                                    <span class="skill-val">95%</span>
+                                </div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Responsive Web Design</span>
+                                    <span class="skill-val">92%</span>
+                                </div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Chart.js & Visualization</span>
+                                    <span class="skill-val">85%</span>
+                                </div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend Content -->
+                    <div class="tab-content" id="backend">
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">MySQL & Relational Databases</span>
+                                    <span class="skill-val">85%</span>
+                                </div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Stored Procedures & Queries</span>
+                                    <span class="skill-val">80%</span>
+                                </div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Firebase Realtime Database</span>
+                                    <span class="skill-val">80%</span>
+                                </div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Database Modeling (ER/UML)</span>
+                                    <span class="skill-val">85%</span>
+                                </div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools Content -->
+                    <div class="tab-content" id="tools">
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Marketing & GTM Strategy</span>
+                                    <span class="skill-val">90%</span>
+                                </div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Figma / UI Mockups</span>
+                                    <span class="skill-val">80%</span>
+                                </div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Git & Version Control</span>
+                                    <span class="skill-val">85%</span>
+                                </div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">UML System Mapping</span>
+                                    <span class="skill-val">85%</span>
+                                </div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Showcase</span>
+                    <h2 class="section-title">My Projects</h2>
+                </div>
+
+                <div class="project-filters reveal">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web">Web & App</button>
+                    <button class="filter-btn" data-filter="system">Systems & Databases</button>
+                    <button class="filter-btn" data-filter="strategy">Marketing & Strategy</button>
+                    <button class="filter-btn" data-filter="github">GitHub Repos</button>
+                </div>
+
+                <div class="projects-grid reveal">
+                    <!-- Project 1: TMS -->
+                    <div class="project-card glass-card" data-category="web">
+                        <div class="project-img-wrapper">
+                            <!-- SVG Placeholder for Project Image (Visual, Premium Gradient) -->
+                            <svg class="project-img-svg" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="p1-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#7c3aed" />
+                                        <stop offset="100%" stop-color="#3b82f6" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="100%" height="100%" fill="url(#p1-grad)" />
+                                <!-- Board columns mockup -->
+                                <rect x="20" y="40" width="100" height="170" rx="6" fill="rgba(255,255,255,0.12)" />
+                                <rect x="150" y="40" width="100" height="170" rx="6" fill="rgba(255,255,255,0.12)" />
+                                <rect x="280" y="40" width="100" height="170" rx="6" fill="rgba(255,255,255,0.12)" />
+                                <rect x="30" y="55" width="80" height="30" rx="4" fill="rgba(255,255,255,0.2)" />
+                                <rect x="30" y="95" width="80" height="40" rx="4" fill="rgba(255,255,255,0.2)" />
+                                <rect x="160" y="55" width="80" height="45" rx="4" fill="rgba(255,255,255,0.2)" />
+                                <rect x="290" y="55" width="80" height="35" rx="4" fill="rgba(255,255,255,0.2)" />
+                            </svg>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Web Development</span>
+                            <h3 class="project-title">TMS – Task Management System</h3>
+                            <p class="project-desc">A highly interactive frontend and UI web application designed for agile task tracking, powered by Firebase Realtime Database for instant state synchronization.</p>
+                            <div class="project-tags">
+                                <span>HTML5/CSS3</span>
+                                <span>JavaScript</span>
+                                <span>Firebase</span>
+                                <span>Realtime DB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Github repository">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View live application">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: AquaGrow -->
+                    <div class="project-card glass-card" data-category="strategy">
+                        <div class="project-img-wrapper">
+                            <svg class="project-img-svg" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="p2-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#10b981" />
+                                        <stop offset="100%" stop-color="#06b6d4" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="100%" height="100%" fill="url(#p2-grad)" />
+                                <!-- Hydroponic plant representation -->
+                                <rect x="140" y="140" width="120" height="20" rx="3" fill="rgba(255,255,255,0.2)" />
+                                <rect x="195" y="70" width="10" height="70" fill="rgba(255,255,255,0.3)" />
+                                <circle cx="200" cy="50" r="25" fill="rgba(255,255,255,0.15)" />
+                                <path d="M175,70 Q150,40 195,70 Z" fill="white" opacity="0.3" />
+                                <path d="M225,70 Q250,40 205,70 Z" fill="white" opacity="0.3" />
+                            </svg>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Marketing & Strategy</span>
+                            <h3 class="project-title">AquaGrow Hydroponics</h3>
+                            <p class="project-desc">A comprehensive go-to-market strategy for a smart hydroponic appliance designed by Team Futurix, highlighting commercial viability and positioning.</p>
+                            <div class="project-tags">
+                                <span>GTM Strategy</span>
+                                <span>Market Analysis</span>
+                                <span>Team Futurix</span>
+                                <span>IoT Appliance</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View marketing case study">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Marketing Analytics Dashboard -->
+                    <div class="project-card glass-card" data-category="web">
+                        <div class="project-img-wrapper">
+                            <svg class="project-img-svg" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="p3-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#f43f5e" />
+                                        <stop offset="100%" stop-color="#f97316" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="100%" height="100%" fill="url(#p3-grad)" />
+                                <!-- Dashboard chart mock -->
+                                <rect x="30" y="30" width="340" height="30" rx="4" fill="rgba(255,255,255,0.15)" />
+                                <rect x="30" y="80" width="70" height="130" rx="4" fill="rgba(255,255,255,0.1)" />
+                                <!-- Charts lines -->
+                                <path d="M120,180 L160,130 L200,150 L240,90 L280,120 L320,70 L360,110" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" opacity="0.75" />
+                                <circle cx="320" cy="70" r="6" fill="#fff" />
+                            </svg>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Web Application</span>
+                            <h3 class="project-title">Marketing Analytics Dashboard</h3>
+                            <p class="project-desc">A professional 5-page analytics interface built using React, React Router, Chart.js graphs, and optimized locally via Vite bundles.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Chart.js</span>
+                                <span>Vite</span>
+                                <span>Dashboard UI</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Github repository">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View live dashboard">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Attendance Management System -->
+                    <div class="project-card glass-card" data-category="system">
+                        <div class="project-img-wrapper">
+                            <svg class="project-img-svg" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="p4-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#6366f1" />
+                                        <stop offset="100%" stop-color="#3b82f6" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="100%" height="100%" fill="url(#p4-grad)" />
+                                <!-- ER/UML database diagrams representation -->
+                                <rect x="50" y="50" width="100" height="110" rx="4" fill="rgba(255,255,255,0.15)" />
+                                <rect x="250" y="90" width="100" height="110" rx="4" fill="rgba(255,255,255,0.15)" />
+                                <rect x="60" y="60" width="80" height="15" fill="rgba(255,255,255,0.25)" />
+                                <rect x="260" y="100" width="80" height="15" fill="rgba(255,255,255,0.25)" />
+                                <!-- Connections line -->
+                                <path d="M150,105 L250,145" fill="none" stroke="white" stroke-width="2" stroke-dasharray="4" opacity="0.7" />
+                            </svg>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Database & Backend</span>
+                            <h3 class="project-title">Attendance Management</h3>
+                            <p class="project-desc">A system with complete relational schemas, UML architecture blueprints, ER diagrams, and optimized MySQL stored procedures.</p>
+                            <div class="project-tags">
+                                <span>MySQL</span>
+                                <span>UML Design</span>
+                                <span>ER Diagrams</span>
+                                <span>Procedures</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View database schemas">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: PharmaLink -->
+                    <div class="project-card glass-card" data-category="system">
+                        <div class="project-img-wrapper">
+                            <svg class="project-img-svg" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="p5-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#8b5cf6" />
+                                        <stop offset="100%" stop-color="#ec4899" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="100%" height="100%" fill="url(#p5-grad)" />
+                                <!-- Medicine capsule representation -->
+                                <rect x="140" y="110" width="120" height="40" rx="20" fill="rgba(255,255,255,0.2)" />
+                                <path d="M140,130 L200,130" stroke="white" stroke-width="2" opacity="0.3" />
+                                <circle cx="170" cy="130" r="10" fill="white" opacity="0.15" />
+                                <circle cx="230" cy="130" r="10" fill="white" opacity="0.15" />
+                            </svg>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Academic Project</span>
+                            <h3 class="project-title">PharmaLink</h3>
+                            <p class="project-desc">A pharmaceutical distribution mapping system connecting warehouses, retailers, and tracking shipments. Conceived as an academic system project.</p>
+                            <div class="project-tags">
+                                <span>Academic</span>
+                                <span>Systems</span>
+                                <span>Supply Chain</span>
+                                <span>Web App</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View project documentation">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section experience-section" id="experience">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Timeline</span>
+                    <h2 class="section-title">Professional Journey</h2>
+                </div>
+
+                <div class="timeline reveal">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date">2024 - Present</span>
+                            <h3 class="timeline-title">Software Developer</h3>
+                            <h4 class="timeline-company">Futurix Tech Labs</h4>
+                            <p class="timeline-desc">Design full-stack systems, compile database migrations, model data workflows, and align go-to-market strategies for smart appliances.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date">2022 - 2024</span>
+                            <h3 class="timeline-title">Database Architect & Analyst</h3>
+                            <h4 class="timeline-company">Launchpad Systems</h4>
+                            <p class="timeline-desc">Designed UML schemas and managed relational databases. Improved query response times by restructuring stored procedures.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date">2021 - 2022</span>
+                            <h3 class="timeline-title">Junior Developer</h3>
+                            <h4 class="timeline-company">Academic Tech Incubator</h4>
+                            <p class="timeline-desc">Built initial components for TMS interfaces, mapped relational databases, and coordinated layout mockups in Figma.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Let's Work Together</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info reveal">
+                        <h3 class="contact-subtitle">Collaboration & Inquiries</h3>
+                        <p class="contact-desc">
+                            Got a project idea, question, or just want to say hello? Fill out the form, or reach out directly via my socials.
+                        </p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <div class="icon-box-small">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                </div>
+                                <span>hello@imasha.dev</span>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="icon-box-small">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                </div>
+                                <span>Colombo, Sri Lanka</span>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="GitHub link">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="LinkedIn link">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter link">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper reveal">
+                        <form id="contact-form" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <input type="text" id="form-name" name="name" class="form-input" placeholder=" " required>
+                                <label for="form-name" class="form-label">Full Name</label>
+                                <span class="form-error-msg" id="name-error">Please enter your name</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="form-email" name="email" class="form-input" placeholder=" " required>
+                                <label for="form-email" class="form-label">Email Address</label>
+                                <span class="form-error-msg" id="email-error">Please enter a valid email</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="text" id="form-subject" name="subject" class="form-input" placeholder=" " required>
+                                <label for="form-subject" class="form-label">Subject</label>
+                                <span class="form-error-msg" id="subject-error">Please enter a subject</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <textarea id="form-message" name="message" class="form-input" placeholder=" " rows="5" required></textarea>
+                                <label for="form-message" class="form-label">Your Message</label>
+                                <span class="form-error-msg" id="message-error">Please enter a message</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                                <span>Send Message</span>
+                                <svg class="icon submit-spinner hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
+                                    <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"></path>
+                                </svg>
+                            </button>
+                            
+                            <div class="form-feedback hidden" id="form-feedback"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <a href="#" class="logo">
+                    <span class="logo-accent">Imasha</span>Karunathilaka
+                </a>
+                <p class="footer-tagline">Crafting modern interfaces with high performance and premium animations.</p>
+            </div>
+            
+            <div class="footer-links">
+                <ul class="footer-nav">
+                    <li><a href="#about" class="footer-link">About</a></li>
+                    <li><a href="#skills" class="footer-link">Skills</a></li>
+                    <li><a href="#projects" class="footer-link">Projects</a></li>
+                    <li><a href="#experience" class="footer-link">Experience</a></li>
+                    <li><a href="#contact" class="footer-link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 Imasha Karunathilaka. All rights reserved.</p>
+                <button class="back-to-top" id="back-to-top" aria-label="Scroll to top">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>
