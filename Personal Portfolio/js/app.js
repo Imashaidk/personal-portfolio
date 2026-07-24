@@ -324,28 +324,63 @@ async function fetchGitHubProjects() {
             const currentGradient = gradients[index % gradients.length];
             
             const card = document.createElement('div');
-            card.className = 'project-card glass-card reveal revealed';
+            card.className = 'project-card glass-card reveal revealed github-card';
             card.setAttribute('data-category', 'github');
             
             // Format language tag if exists
             const langTag = repo.language ? `<span>${repo.language}</span>` : '';
             
-            // Professional custom descriptions mapping for known repositories without descriptions
+            // Punchy, creative custom descriptions mapping
             const professionalDescriptions = {
-                'SL-delivery-analytics': 'A comprehensive data pipeline platform analyzing transit times, delivery success rates, and route optimizations.',
-                'ecommerce-app': 'A modern e-commerce web application featuring state management, dynamic carts, and responsive UI components.',
-                'TimeFlow': 'A sleek productivity and time-tracking application designed for workflow optimization and task management.',
-                'personal-portfolio': 'My professional developer portfolio showcasing my expertise in full-stack engineering, databases, and UI design.',
-                'task-management-system': 'A collaborative task management dashboard tailored for agile teams with real-time updates and interactive interfaces.'
+                'SL-delivery-analytics': 'Supercharging logistics with a powerful data pipeline analyzing transit times, success rates, and route optimizations in real-time.',
+                'ecommerce-app': 'Redefining digital storefronts with dynamic state management, seamless cart experiences, and high-performance UI components.',
+                'TimeFlow': 'Mastering productivity with a sleek, intuitive time-tracking architecture designed to optimize workflows and destroy procrastination.',
+                'personal-portfolio': 'The very portfolio you are browsing! A masterclass in full-stack engineering, interactive UI design, and dynamic data integration.',
+                'task-management-system': 'Unleashing team synergy with a collaborative, real-time task management dashboard tailored for high-velocity agile environments.'
             };
             
-            // Fallback chain: GitHub desc -> Professional Custom -> Generic
-            const desc = repo.description 
-                || professionalDescriptions[repo.name] 
+            // Custom themed SVG artwork mapping
+            const customSVGs = {
+                'SL-delivery-analytics': `
+                    <!-- 3D Analytics Chart -->
+                    <rect x="100" y="140" width="40" height="60" rx="4" fill="rgba(255,255,255,0.15)" />
+                    <rect x="180" y="90" width="40" height="110" rx="4" fill="rgba(255,255,255,0.25)" />
+                    <rect x="260" y="50" width="40" height="150" rx="4" fill="rgba(255,255,255,0.35)" />
+                    <path d="M120,130 L200,70 L280,30" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" opacity="0.8" />
+                    <circle cx="280" cy="30" r="8" fill="white" />`,
+                
+                'ecommerce-app': `
+                    <!-- Shopping Cart/Storefront -->
+                    <path d="M110,70 L140,70 L160,150 L280,150 L300,90 L145,90" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="12" stroke-linejoin="round" />
+                    <circle cx="180" cy="180" r="15" fill="rgba(255,255,255,0.6)" />
+                    <circle cx="260" cy="180" r="15" fill="rgba(255,255,255,0.6)" />`,
+                
+                'TimeFlow': `
+                    <!-- Floating Hourglass -->
+                    <path d="M160,60 L240,60 L240,80 L210,125 L240,170 L240,190 L160,190 L160,170 L190,125 L160,80 Z" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="4" />
+                    <path d="M175,180 L225,180 L195,135 Z" fill="rgba(255,255,255,0.5)" />`,
+                    
+                'personal-portfolio': `
+                    <!-- Code Window -->
+                    <rect x="80" y="60" width="240" height="130" rx="12" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="4" />
+                    <circle cx="100" cy="80" r="6" fill="#ef4444" />
+                    <circle cx="120" cy="80" r="6" fill="#f59e0b" />
+                    <circle cx="140" cy="80" r="6" fill="#10b981" />
+                    <path d="M100,120 L130,140 L100,160 M145,160 L185,160" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" />`
+            };
+            
+            // Generic GitHub icon fallback
+            const genericSVG = `<path d="M200 60 C 160 60 130 90 130 130 C 130 160 150 185 180 195 C 185 195 185 190 185 190 C 185 190 185 170 185 160 C 165 165 160 150 160 150 C 155 140 150 135 150 135 C 140 130 150 130 150 130 C 160 130 165 140 165 140 C 175 155 190 150 195 150 C 195 145 200 140 200 140 C 180 135 160 130 160 100 C 160 90 165 85 170 80 C 170 80 165 70 170 65 C 170 65 180 65 200 80 C 210 75 220 75 230 75 C 240 75 250 75 260 80 C 280 65 290 65 290 65 C 295 70 290 80 290 80 C 295 85 300 90 300 100 C 300 130 280 135 260 140 C 265 140 270 145 270 150 C 270 160 270 185 270 190 C 270 190 270 195 275 195 C 305 185 330 160 330 130 C 330 90 295 60 255 60 C 245 60 215 60 200 60 Z" fill="rgba(255,255,255,0.2)"/>`;
+            
+            const artwork = customSVGs[repo.name] || genericSVG;
+            
+            // Fallback chain: Professional Custom -> GitHub desc -> Generic
+            const desc = professionalDescriptions[repo.name] 
+                || repo.description 
                 || 'An experimental software project exploring new technologies and architectural patterns.';
             
             card.innerHTML = `
-                <div class="project-img-wrapper">
+                <div class="project-img-wrapper github-creative-wrapper">
                     <svg class="project-img-svg" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <linearGradient id="${currentGradient.id}" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -354,8 +389,10 @@ async function fetchGitHubProjects() {
                             </linearGradient>
                         </defs>
                         <rect width="100%" height="100%" fill="url(#${currentGradient.id})" />
-                        <!-- GitHub Icon representation -->
-                        <path d="M200 60 C 160 60 130 90 130 130 C 130 160 150 185 180 195 C 185 195 185 190 185 190 C 185 190 185 170 185 160 C 165 165 160 150 160 150 C 155 140 150 135 150 135 C 140 130 150 130 150 130 C 160 130 165 140 165 140 C 175 155 190 150 195 150 C 195 145 200 140 200 140 C 180 135 160 130 160 100 C 160 90 165 85 170 80 C 170 80 165 70 170 65 C 170 65 180 65 200 80 C 210 75 220 75 230 75 C 240 75 250 75 260 80 C 280 65 290 65 290 65 C 295 70 290 80 290 80 C 295 85 300 90 300 100 C 300 130 280 135 260 140 C 265 140 270 145 270 150 C 270 160 270 185 270 190 C 270 190 270 195 275 195 C 305 185 330 160 330 130 C 330 90 295 60 255 60 C 245 60 215 60 200 60 Z" fill="rgba(255,255,255,0.2)"/>
+                        <!-- Project Specific Artwork -->
+                        <g class="github-artwork">
+                            ${artwork}
+                        </g>
                     </svg>
                 </div>
                 <div class="project-info">
