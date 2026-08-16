@@ -977,7 +977,8 @@
                     </div>
 
                     <div class="contact-form-wrapper reveal">
-                        <form id="contact-form" class="contact-form" novalidate>
+                        <form id="contact-form" class="contact-form" name="contact" method="POST" data-netlify="true" novalidate>
+                            <input type="hidden" name="form-name" value="contact">
                             <div class="form-group">
                                 <input type="text" id="form-name" name="name" class="form-input" placeholder=" " required>
                                 <label for="form-name" class="form-label">Full Name</label>
