@@ -273,7 +273,7 @@ function initChart() {
                 legend: {
                     position: 'bottom',
                     labels: {
-                        color: '#cccccc',
+                        color: '#333333',
                         font: { family: "'Inter', sans-serif", size: 12 }
                     }
                 }

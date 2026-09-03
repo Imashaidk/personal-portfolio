@@ -1,6 +1,5 @@
 /* ==========================================================================
-   Apple Design System - Personal Portfolio Stylesheet
-   Based on Apple Web Design Language Specification (design.md)
+   Apple Design System - All-White Canvas & Black Typography Theme
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -8,31 +7,32 @@
    -------------------------------------------------------------------------- */
 :root {
     /* Brand & Accent Colors */
-    --color-primary: #0066cc;          /* Action Blue - sole interactive color */
+    --color-primary: #0066cc;          /* Action Blue */
     --color-primary-hover: #0055b3;
     --color-primary-focus: #0071e3;    /* Focus Ring Blue */
-    --color-primary-on-dark: #2997ff; /* Sky Link Blue for dark tiles */
+    --color-primary-on-dark: #0066cc;
 
-    /* Canvas & Surface Colors */
+    /* Canvas & Surface Colors - Pure White Theme */
     --color-canvas: #ffffff;
-    --color-canvas-parchment: #f5f5f7;
+    --color-canvas-parchment: #f8f8fa;
     --color-surface-pearl: #fafafc;
-    --color-surface-tile-1: #272729;  /* Near-Black Tile 1 */
-    --color-surface-tile-2: #2a2a2c;  /* Near-Black Tile 2 */
-    --color-surface-tile-3: #252527;  /* Near-Black Tile 3 */
-    --color-surface-black: #000000;   /* Global Nav & Void */
-    --color-chip-translucent: rgba(210, 210, 215, 0.64);
+    --color-surface-tile-1: #ffffff;
+    --color-surface-tile-2: #f8f8fa;
+    --color-surface-tile-3: #f0f0f4;
+    --color-surface-black: #ffffff;   /* Pure White for Nav */
+    --color-chip-translucent: rgba(0, 0, 0, 0.05);
 
-    /* Text & Ink Tones */
-    --color-ink: #1d1d1f;              /* Primary text on light surfaces */
-    --color-body-on-dark: #ffffff;      /* Text on dark surfaces */
-    --color-body-muted-dark: #cccccc;   /* Muted text on dark tiles */
-    --color-ink-muted-80: #333333;      /* Pearl surface text */
-    --color-ink-muted-48: #7a7a7a;      /* Fine print & legal */
+    /* Text & Ink Tones - Black Fonts */
+    --color-ink: #000000;              /* Pure Black for headlines & main text */
+    --color-body-text: #1d1d1f;         /* Near-Black for body text */
+    --color-body-on-dark: #1d1d1f;      /* Black text across all sections */
+    --color-body-muted-dark: #555555;   /* Secondary muted dark text */
+    --color-ink-muted-80: #333333;      
+    --color-ink-muted-48: #666666;      /* Fine print & legal */
 
     /* Lines & Hairlines */
     --color-hairline: #e0e0e0;
-    --color-hairline-dark: rgba(255, 255, 255, 0.12);
+    --color-hairline-dark: #e0e0e0;
     --color-divider-soft: #f0f0f0;
 
     /* Typography Stack */
@@ -47,9 +47,9 @@
     --radius-pill: 9999px;
     --radius-full: 50%;
 
-    /* Elevation & Shadow - Product Photography Only */
-    --product-shadow: rgba(0, 0, 0, 0.22) 3px 5px 30px 0px;
-    --product-shadow-dark: rgba(0, 0, 0, 0.55) 0px 10px 40px 0px;
+    /* Elevation & Shadow - Reserved for visual elements only */
+    --product-shadow: rgba(0, 0, 0, 0.08) 0px 10px 30px 0px, rgba(0, 0, 0, 0.04) 0px 1px 3px 0px;
+    --product-shadow-dark: rgba(0, 0, 0, 0.1) 0px 12px 36px 0px;
 
     /* Transitions */
     --transition-micro: transform 0.15s cubic-bezier(0.25, 1, 0.5, 1);
@@ -68,8 +68,8 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
-    background-color: var(--color-canvas);
-    color: var(--color-ink);
+    background-color: #ffffff;
+    color: #000000;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -79,19 +79,20 @@ body {
     font-size: 17px;
     line-height: 1.47;
     letter-spacing: -0.374px;
-    color: var(--color-ink);
-    background-color: var(--color-canvas);
+    color: #000000;
+    background-color: #ffffff;
     overflow-x: hidden;
 }
 
 /* --------------------------------------------------------------------------
-   3. Typography Classes (Strict adherence to design.md)
+   3. Typography Classes (Pure Black Text)
    -------------------------------------------------------------------------- */
 .hero-display {
     font-size: 56px;
     font-weight: 600;
     line-height: 1.07;
     letter-spacing: -0.028em;
+    color: #000000;
 }
 
 .display-lg {
@@ -99,6 +100,7 @@ body {
     font-weight: 600;
     line-height: 1.10;
     letter-spacing: -0.018em;
+    color: #000000;
 }
 
 .display-md {
@@ -106,6 +108,7 @@ body {
     font-weight: 600;
     line-height: 1.47;
     letter-spacing: -0.374px;
+    color: #000000;
 }
 
 .lead-text {
@@ -113,6 +116,7 @@ body {
     font-weight: 400;
     line-height: 1.14;
     letter-spacing: 0;
+    color: #1d1d1f;
 }
 
 .tagline-text {
@@ -120,6 +124,7 @@ body {
     font-weight: 600;
     line-height: 1.19;
     letter-spacing: 0.231px;
+    color: #000000;
 }
 
 .body-strong {
@@ -127,6 +132,7 @@ body {
     font-weight: 600;
     line-height: 1.24;
     letter-spacing: -0.374px;
+    color: #000000;
 }
 
 .body-text {
@@ -134,12 +140,14 @@ body {
     font-weight: 400;
     line-height: 1.47;
     letter-spacing: -0.374px;
+    color: #1d1d1f;
 }
 
 .dense-link {
     font-size: 17px;
     font-weight: 400;
     line-height: 2.41;
+    color: #1d1d1f;
 }
 
 .caption-text {
@@ -147,6 +155,7 @@ body {
     font-weight: 400;
     line-height: 1.43;
     letter-spacing: -0.224px;
+    color: #333333;
 }
 
 .caption-strong {
@@ -154,6 +163,7 @@ body {
     font-weight: 600;
     line-height: 1.29;
     letter-spacing: -0.224px;
+    color: #000000;
 }
 
 .button-utility-text {
@@ -161,6 +171,7 @@ body {
     font-weight: 400;
     line-height: 1.29;
     letter-spacing: -0.224px;
+    color: #000000;
 }
 
 .fine-print-text {
@@ -168,6 +179,7 @@ body {
     font-weight: 400;
     line-height: 1.3;
     letter-spacing: -0.12px;
+    color: #666666;
 }
 
 .nav-link-text {
@@ -175,6 +187,7 @@ body {
     font-weight: 400;
     line-height: 1.0;
     letter-spacing: -0.12px;
+    color: #000000;
 }
 
 /* Links */
@@ -189,7 +202,7 @@ a:hover {
 }
 
 .link-on-dark {
-    color: var(--color-primary-on-dark);
+    color: var(--color-primary);
 }
 
 /* Focus styles */
@@ -236,14 +249,14 @@ a:hover {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background-color: transparent;
-    color: var(--color-primary) !important;
+    background-color: #ffffff;
+    color: #000000 !important;
     font-size: 17px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1;
     padding: 11px 22px;
     border-radius: var(--radius-pill);
-    border: 1px solid var(--color-primary);
+    border: 1px solid #d0d0d0;
     cursor: pointer;
     text-decoration: none !important;
     transition: var(--transition-micro);
@@ -251,7 +264,8 @@ a:hover {
 }
 
 .btn-secondary-pill:hover {
-    background-color: rgba(0, 102, 204, 0.05);
+    border-color: #000000;
+    background-color: #f8f8fa;
     text-decoration: none !important;
 }
 
@@ -259,111 +273,46 @@ a:hover {
     transform: scale(0.95);
 }
 
-/* Secondary Ghost Pill for Dark Surfaces */
-.btn-secondary-pill-dark {
-    color: var(--color-primary-on-dark) !important;
-    border-color: var(--color-primary-on-dark);
-}
-
-.btn-secondary-pill-dark:hover {
-    background-color: rgba(41, 151, 255, 0.1);
-}
-
-/* Dark Utility Button (Nav actions, bag, sign in) */
-.btn-dark-utility {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-ink);
-    color: #ffffff !important;
-    font-size: 14px;
-    font-weight: 400;
-    padding: 8px 15px;
-    border-radius: var(--radius-sm);
-    border: none;
-    cursor: pointer;
-    transition: var(--transition-micro);
-}
-
-.btn-dark-utility:active {
-    transform: scale(0.95);
-}
-
-/* Pearl Capsule Button */
-.btn-pearl-capsule {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-surface-pearl);
-    color: var(--color-ink-muted-80) !important;
-    font-size: 14px;
-    font-weight: 400;
-    padding: 8px 14px;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--color-hairline);
-    cursor: pointer;
-    transition: var(--transition-micro);
-}
-
-.btn-pearl-capsule:active {
-    transform: scale(0.95);
-}
-
-/* Configurator Option Chip */
+/* Configurator Option Chips */
 .configurator-chip {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-canvas);
-    color: var(--color-ink);
+    background-color: #ffffff;
+    color: #000000;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     padding: 10px 18px;
     border-radius: var(--radius-pill);
-    border: 1px solid var(--color-hairline);
+    border: 1px solid #e0e0e0;
     cursor: pointer;
     transition: var(--transition-smooth);
     user-select: none;
 }
 
 .configurator-chip:hover {
-    border-color: #bbbbbb;
+    border-color: #000000;
 }
 
 .configurator-chip.selected {
-    border: 2px solid var(--color-primary-focus);
+    border: 2px solid #0066cc;
     font-weight: 600;
-    color: var(--color-primary);
-}
-
-/* Configurator Chip on Dark Surface */
-.configurator-chip-dark {
-    background-color: var(--color-surface-tile-1);
-    color: var(--color-body-on-dark);
-    border-color: rgba(255, 255, 255, 0.15);
-}
-
-.configurator-chip-dark:hover {
-    border-color: rgba(255, 255, 255, 0.3);
-}
-
-.configurator-chip-dark.selected {
-    border: 2px solid var(--color-primary-on-dark);
-    color: var(--color-primary-on-dark);
-    background-color: rgba(41, 151, 255, 0.1);
+    color: #0066cc;
+    background-color: #f0f7ff;
 }
 
 /* --------------------------------------------------------------------------
-   5. Two-Row Apple Navigation Structure
+   5. Two-Row Navigation Structure (White Canvas)
    -------------------------------------------------------------------------- */
-/* Row 1: Global Nav Bar (Slim, Black, 44px) */
+/* Row 1: Global Nav Bar (Slim, White Background, 44px) */
 .global-nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 44px;
-    background-color: var(--color-surface-black);
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5ea;
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -380,7 +329,7 @@ a:hover {
 }
 
 .global-nav-brand {
-    color: #ffffff;
+    color: #000000;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: -0.2px;
@@ -404,7 +353,7 @@ a:hover {
 }
 
 .global-nav-list a {
-    color: var(--color-body-muted-dark);
+    color: #333333;
     font-size: 12px;
     font-weight: 400;
     letter-spacing: -0.12px;
@@ -412,7 +361,7 @@ a:hover {
 }
 
 .global-nav-list a:hover {
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -425,7 +374,7 @@ a:hover {
 .global-nav-icon-btn {
     background: transparent;
     border: none;
-    color: var(--color-body-muted-dark);
+    color: #333333;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -435,7 +384,7 @@ a:hover {
 }
 
 .global-nav-icon-btn:hover {
-    color: #ffffff;
+    color: #000000;
 }
 
 .global-nav-icon-btn svg {
@@ -443,21 +392,20 @@ a:hover {
     height: 16px;
 }
 
-/* Row 2: Sub-Nav Frosted Glass (52px, Sticky under Global Nav) */
+/* Row 2: Sub-Nav Frosted Glass (White 82% Opacity) */
 .sub-nav-frosted {
     position: sticky;
     top: 44px;
     left: 0;
     width: 100%;
     height: 52px;
-    background-color: rgba(245, 245, 247, 0.82);
+    background-color: rgba(255, 255, 255, 0.88);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid #e5e5ea;
     z-index: 999;
     display: flex;
     align-items: center;
-    transition: border-color 0.3s ease;
 }
 
 .sub-nav-container {
@@ -474,7 +422,7 @@ a:hover {
     font-size: 21px;
     font-weight: 600;
     line-height: 1.19;
-    color: var(--color-ink);
+    color: #000000;
     letter-spacing: 0.231px;
 }
 
@@ -488,7 +436,7 @@ a:hover {
 .sub-nav-menu a {
     font-size: 14px;
     font-weight: 400;
-    color: var(--color-ink);
+    color: #1d1d1f;
     letter-spacing: -0.224px;
     transition: color 0.2s ease;
 }
@@ -503,12 +451,12 @@ a:hover {
     padding: 6px 14px;
 }
 
-/* Mobile Hamburger Menu Toggle */
+/* Mobile Toggle */
 .mobile-menu-btn {
     display: none;
     background: transparent;
     border: none;
-    color: #ffffff;
+    color: #000000;
     cursor: pointer;
     padding: 4px;
 }
@@ -519,7 +467,7 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   6. Full-Bleed Tile Rhythm System
+   6. Full-Bleed Tile Rhythm System (All White / Light Parchment)
    -------------------------------------------------------------------------- */
 .product-tile {
     width: 100%;
@@ -530,6 +478,8 @@ a:hover {
     text-align: center;
     position: relative;
     box-sizing: border-box;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f4;
 }
 
 .tile-container {
@@ -541,59 +491,29 @@ a:hover {
     align-items: center;
 }
 
-/* Tile Variants */
-.product-tile-light {
-    background-color: var(--color-canvas);
-    color: var(--color-ink);
+/* All Sections Clean Light Backgrounds */
+.product-tile-light,
+.product-tile-parchment,
+.product-tile-dark,
+.product-tile-dark-2,
+.product-tile-dark-3 {
+    background-color: #ffffff;
+    color: #000000;
 }
 
 .product-tile-parchment {
-    background-color: var(--color-canvas-parchment);
-    color: var(--color-ink);
+    background-color: #f8f8fa;
 }
 
-.product-tile-dark {
-    background-color: var(--color-surface-tile-1);
-    color: var(--color-body-on-dark);
-}
-
-.product-tile-dark .tile-headline,
-.product-tile-dark .tile-subheadline,
-.product-tile-dark h2,
-.product-tile-dark h3 {
-    color: var(--color-body-on-dark);
-}
-
-.product-tile-dark-2 {
-    background-color: var(--color-surface-tile-2);
-    color: var(--color-body-on-dark);
-}
-
-.product-tile-dark-2 .tile-headline,
-.product-tile-dark-2 .tile-subheadline,
-.product-tile-dark-2 h2,
-.product-tile-dark-2 h3 {
-    color: var(--color-body-on-dark);
-}
-
-.product-tile-dark-3 {
-    background-color: var(--color-surface-tile-3);
-    color: var(--color-body-on-dark);
-}
-
-/* Tile Content Stack */
-.tile-headline {
-    margin-bottom: 8px;
+.tile-headline,
+.tile-subheadline,
+h1, h2, h3, h4 {
+    color: #000000 !important;
 }
 
 .tile-subheadline {
     margin-bottom: 20px;
-    color: #6e6e73;
-}
-
-.product-tile-dark .tile-subheadline,
-.product-tile-dark-2 .tile-subheadline {
-    color: var(--color-body-muted-dark);
+    color: #424245 !important;
 }
 
 .tile-cta-group {
@@ -616,6 +536,7 @@ a:hover {
 .hero-tile {
     padding-top: 100px;
     padding-bottom: 80px;
+    background-color: #ffffff;
 }
 
 .hero-subtitle-chip {
@@ -630,28 +551,29 @@ a:hover {
 .hero-title-main {
     margin-bottom: 16px;
     max-width: 800px;
+    color: #000000;
 }
 
 .hero-description-text {
     max-width: 640px;
-    color: #6e6e73;
+    color: #333333 !important;
     font-size: 21px;
     line-height: 1.38;
     margin-bottom: 28px;
 }
 
-/* Visual Product Card - Features the System Drop Shadow */
+/* Code Card Visual - Crisp White Slate with Border & Shadow */
 .hero-code-card {
-    background-color: #1e1e24;
+    background-color: #f8f9fa;
     border-radius: var(--radius-lg);
     box-shadow: var(--product-shadow);
     padding: 24px 32px;
     text-align: left;
-    color: #f0f0f5;
+    color: #1d1d1f;
     font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
     font-size: 14px;
     line-height: 1.6;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid #e0e0e8;
     position: relative;
     overflow: hidden;
 }
@@ -671,13 +593,13 @@ a:hover {
 .dot-yellow { background-color: #ffbd2e; }
 .dot-green { background-color: #27c93f; }
 
-.kw { color: #ff79c6; }
-.var { color: #50fa7b; }
-.str { color: #f1fa8c; }
-.cm { color: #6272a4; }
+.kw { color: #d73a49; font-weight: 600; }
+.var { color: #005cc5; }
+.str { color: #032f62; }
+.cm { color: #6a737d; }
 
 /* --------------------------------------------------------------------------
-   8. About Section
+   8. About Section (White Background, Black Text)
    -------------------------------------------------------------------------- */
 .about-grid {
     display: grid;
@@ -691,7 +613,7 @@ a:hover {
 
 .about-text-column p {
     margin-bottom: 18px;
-    color: var(--color-body-muted-dark);
+    color: #1d1d1f;
 }
 
 .about-stats-column {
@@ -700,34 +622,35 @@ a:hover {
     gap: 20px;
 }
 
-/* Stat Tile Card - White Utility Card Grammar */
+/* Stat Tile Card - White Surface Grammar */
 .apple-stat-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--color-hairline-dark);
+    background: #ffffff;
+    border: 1px solid #e0e0e5;
     border-radius: var(--radius-lg);
     padding: 28px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
 }
 
 .stat-number {
     font-size: 48px;
     font-weight: 600;
     line-height: 1.05;
-    color: #ffffff;
+    color: #000000 !important;
     letter-spacing: -0.02em;
     margin-bottom: 4px;
 }
 
 .stat-label {
     font-size: 14px;
-    color: var(--color-body-muted-dark);
+    color: #555555 !important;
     font-weight: 400;
 }
 
 /* --------------------------------------------------------------------------
-   9. Skills Section & Configurator Utility Cards
+   9. Skills Section (Light Parchment Background)
    -------------------------------------------------------------------------- */
 .configurator-controls {
     display: flex;
@@ -746,8 +669,8 @@ a:hover {
 
 /* Store Utility Card Grammar */
 .store-utility-card {
-    background-color: var(--color-canvas);
-    border: 1px solid var(--color-hairline);
+    background-color: #ffffff;
+    border: 1px solid #e0e0e5;
     border-radius: var(--radius-lg);
     padding: 24px;
     text-align: left;
@@ -755,10 +678,11 @@ a:hover {
     flex-direction: column;
     justify-content: space-between;
     transition: var(--transition-smooth);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
 .store-utility-card:hover {
-    border-color: #c7c7cc;
+    border-color: #000000;
 }
 
 .skill-card-header {
@@ -771,7 +695,7 @@ a:hover {
 .skill-name {
     font-size: 17px;
     font-weight: 600;
-    color: var(--color-ink);
+    color: #000000;
 }
 
 .skill-val {
@@ -797,7 +721,7 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   10. Projects Showcase (Store Cards & Renders)
+   10. Projects Showcase (White Cards, Black Fonts)
    -------------------------------------------------------------------------- */
 .projects-grid-apple {
     width: 100%;
@@ -808,8 +732,8 @@ a:hover {
 }
 
 .project-tile-card {
-    background-color: var(--color-surface-tile-1);
-    border: 1px solid var(--color-hairline-dark);
+    background-color: #ffffff;
+    border: 1px solid #e0e0e5;
     border-radius: var(--radius-lg);
     padding: 32px;
     text-align: left;
@@ -818,10 +742,12 @@ a:hover {
     justify-content: space-between;
     overflow: hidden;
     transition: var(--transition-smooth);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
 }
 
 .project-tile-card:hover {
-    border-color: rgba(255, 255, 255, 0.25);
+    border-color: #000000;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
 .project-render-wrapper {
@@ -830,24 +756,24 @@ a:hover {
     border-radius: var(--radius-sm);
     overflow: hidden;
     margin-bottom: 24px;
-    background: #19191b;
+    background: #f5f5f8;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    border: 1px solid #e5e5ea;
 }
 
 .project-render-wrapper svg {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    box-shadow: var(--product-shadow-dark);
 }
 
 .project-category-tag {
     font-size: 12px;
     font-weight: 600;
-    color: var(--color-primary-on-dark);
+    color: var(--color-primary);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 6px;
@@ -856,13 +782,13 @@ a:hover {
 .project-card-title {
     font-size: 24px;
     font-weight: 600;
-    color: var(--color-body-on-dark);
+    color: #000000 !important;
     margin-bottom: 10px;
 }
 
 .project-card-desc {
     font-size: 15px;
-    color: var(--color-body-muted-dark);
+    color: #424245 !important;
     margin-bottom: 20px;
     line-height: 1.45;
 }
@@ -876,10 +802,11 @@ a:hover {
 
 .tag-chip {
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.7);
-    background: rgba(255, 255, 255, 0.08);
+    color: #333333;
+    background: #f0f0f4;
     padding: 4px 10px;
     border-radius: var(--radius-pill);
+    border: 1px solid #e0e0e5;
 }
 
 .project-links-row {
@@ -909,7 +836,7 @@ a:hover {
     bottom: 10px;
     left: 20px;
     width: 2px;
-    background-color: var(--color-hairline);
+    background-color: #e0e0e5;
 }
 
 .timeline-row {
@@ -925,7 +852,7 @@ a:hover {
     height: 14px;
     border-radius: 50%;
     background-color: var(--color-primary);
-    box-shadow: 0 0 0 4px var(--color-canvas);
+    box-shadow: 0 0 0 4px #ffffff;
 }
 
 .timeline-date-chip {
@@ -938,7 +865,7 @@ a:hover {
 .timeline-item-title {
     font-size: 21px;
     font-weight: 600;
-    color: var(--color-ink);
+    color: #000000 !important;
     margin-bottom: 2px;
 }
 
@@ -950,12 +877,12 @@ a:hover {
 
 .timeline-item-desc {
     font-size: 16px;
-    color: var(--color-ink);
+    color: #1d1d1f !important;
     line-height: 1.45;
 }
 
 /* --------------------------------------------------------------------------
-   12. Contact Form (Apple Search & Utility Input Grammar)
+   12. Contact Form (Clean White Inputs, Black Text)
    -------------------------------------------------------------------------- */
 .contact-form-container {
     width: 100%;
@@ -974,19 +901,19 @@ a:hover {
 .apple-form-label {
     font-size: 14px;
     font-weight: 600;
-    color: var(--color-body-on-dark);
+    color: #000000 !important;
 }
 
 .apple-form-input,
 .apple-form-textarea {
     width: 100%;
-    background-color: var(--color-surface-tile-2);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: #ffffff;
+    border: 1px solid #d0d0d5;
     border-radius: var(--radius-pill);
     padding: 14px 22px;
     font-family: var(--font-family);
     font-size: 16px;
-    color: #ffffff;
+    color: #000000;
     transition: border-color 0.2s ease;
 }
 
@@ -999,13 +926,13 @@ a:hover {
 .apple-form-input:focus,
 .apple-form-textarea:focus {
     outline: none;
-    border-color: var(--color-primary-on-dark);
-    box-shadow: 0 0 0 1px var(--color-primary-on-dark);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 1px var(--color-primary);
 }
 
 .form-error {
     font-size: 12px;
-    color: #ff453a;
+    color: #ff3b30;
     display: none;
 }
 
@@ -1014,13 +941,13 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   13. Footer (Parchment, Relaxed Leading 2.41)
+   13. Footer (White / Light Parchment, Pure Black Fonts)
    -------------------------------------------------------------------------- */
 .apple-footer {
-    background-color: var(--color-canvas-parchment);
-    color: var(--color-ink-muted-80);
+    background-color: #f8f8fa;
+    color: #1d1d1f;
     padding: 64px 24px 40px 24px;
-    border-top: 1px solid var(--color-hairline);
+    border-top: 1px solid #e0e0e5;
     text-align: left;
 }
 
@@ -1039,7 +966,7 @@ a:hover {
 .footer-col-title {
     font-size: 14px;
     font-weight: 600;
-    color: var(--color-ink);
+    color: #000000 !important;
     margin-bottom: 8px;
     letter-spacing: -0.224px;
 }
@@ -1051,18 +978,18 @@ a:hover {
 .footer-links-list li a {
     font-size: 17px;
     font-weight: 400;
-    line-height: 2.41; /* Signature Apple dense-link leading */
-    color: #424245;
+    line-height: 2.41;
+    color: #333333;
     transition: color 0.2s ease;
 }
 
 .footer-links-list li a:hover {
-    color: var(--color-ink);
+    color: #000000;
     text-decoration: underline;
 }
 
 .footer-legal-bar {
-    border-top: 1px solid var(--color-hairline);
+    border-top: 1px solid #e0e0e5;
     padding-top: 20px;
     display: flex;
     justify-content: space-between;
@@ -1070,11 +997,11 @@ a:hover {
     flex-wrap: wrap;
     gap: 16px;
     font-size: 12px;
-    color: var(--color-ink-muted-48);
+    color: #666666;
 }
 
 /* --------------------------------------------------------------------------
-   14. Terminal Easter Egg Window
+   14. Terminal Window
    -------------------------------------------------------------------------- */
 .terminal-overlay {
     position: fixed;
@@ -1082,7 +1009,7 @@ a:hover {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
     z-index: 2000;
     display: flex;
@@ -1100,7 +1027,7 @@ a:hover {
     max-width: 680px;
     background-color: #1e1e24;
     border-radius: var(--radius-lg);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.12);
     overflow: hidden;
     color: #f0f0f5;
@@ -1139,7 +1066,7 @@ a:hover {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.terminal-prompt { color: var(--color-primary-on-dark); }
+.terminal-prompt { color: var(--color-primary); }
 
 .terminal-input {
     background: transparent;
@@ -1152,7 +1079,7 @@ a:hover {
 .terminal-input:focus { outline: none; }
 
 /* --------------------------------------------------------------------------
-   15. Responsiveness (Standard Apple Breakpoints)
+   15. Responsiveness
    -------------------------------------------------------------------------- */
 @media (max-width: 833px) {
     .global-nav-list { display: none; }
