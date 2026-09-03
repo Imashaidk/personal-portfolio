@@ -1,63 +1,62 @@
 /* ==========================================================================
-   Apple Design System - All-White Canvas & Black Typography Theme
+   Apple Studio Edition - Pure White Canvas & Jet Black Typography System
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. Design Tokens & Variables
+   1. Design Tokens & Design System
    -------------------------------------------------------------------------- */
 :root {
-    /* Brand & Accent Colors */
-    --color-primary: #0066cc;          /* Action Blue */
+    /* Primary Interactive Accent */
+    --color-primary: #0066cc;          /* Signature Action Blue */
     --color-primary-hover: #0055b3;
-    --color-primary-focus: #0071e3;    /* Focus Ring Blue */
-    --color-primary-on-dark: #0066cc;
+    --color-primary-active: #004499;
+    --color-primary-focus: #0071e3;
+    --color-primary-soft: rgba(0, 102, 204, 0.06);
 
-    /* Canvas & Surface Colors - Pure White Theme */
+    /* Neutral Canvas & Surfaces (Pure White Dominance) */
     --color-canvas: #ffffff;
     --color-canvas-parchment: #f8f8fa;
-    --color-surface-pearl: #fafafc;
-    --color-surface-tile-1: #ffffff;
-    --color-surface-tile-2: #f8f8fa;
-    --color-surface-tile-3: #f0f0f4;
-    --color-surface-black: #ffffff;   /* Pure White for Nav */
-    --color-chip-translucent: rgba(0, 0, 0, 0.05);
+    --color-canvas-subtle: #f5f5f7;
+    --color-surface-card: #ffffff;
+    --color-surface-hover: #fafafa;
+    
+    /* Text & Ink (High-Contrast Jet Black) */
+    --color-ink-black: #000000;         /* Deepest Jet Black for display titles */
+    --color-ink-body: #1d1d1f;          /* Near-black for longform copy */
+    --color-ink-muted: #424245;         /* Secondary copy */
+    --color-ink-subtle: #6e6e73;        /* Eyebrows & metadata */
+    --color-ink-faint: #86868b;         /* Micro fine print */
 
-    /* Text & Ink Tones - Black Fonts */
-    --color-ink: #000000;              /* Pure Black for headlines & main text */
-    --color-body-text: #1d1d1f;         /* Near-Black for body text */
-    --color-body-on-dark: #1d1d1f;      /* Black text across all sections */
-    --color-body-muted-dark: #555555;   /* Secondary muted dark text */
-    --color-ink-muted-80: #333333;      
-    --color-ink-muted-48: #666666;      /* Fine print & legal */
+    /* Lines & Borders */
+    --color-border-hairline: #e5e5ea;
+    --color-border-hover: #000000;
+    --color-border-focus: #0066cc;
 
-    /* Lines & Hairlines */
-    --color-hairline: #e0e0e0;
-    --color-hairline-dark: #e0e0e0;
-    --color-divider-soft: #f0f0f0;
+    /* Typography Scale (SF Pro / Inter) */
+    --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", sans-serif;
 
-    /* Typography Stack */
-    --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-
-    /* Border Radius Scale */
-    --radius-none: 0px;
-    --radius-xs: 5px;
+    /* Radii Scale */
     --radius-sm: 8px;
-    --radius-md: 11px;
+    --radius-md: 12px;
     --radius-lg: 18px;
+    --radius-xl: 24px;
     --radius-pill: 9999px;
-    --radius-full: 50%;
+    --radius-circle: 50%;
 
-    /* Elevation & Shadow - Reserved for visual elements only */
-    --product-shadow: rgba(0, 0, 0, 0.08) 0px 10px 30px 0px, rgba(0, 0, 0, 0.04) 0px 1px 3px 0px;
-    --product-shadow-dark: rgba(0, 0, 0, 0.1) 0px 12px 36px 0px;
+    /* Product Pedestal Shadows (Only on visual mockups & cards) */
+    --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+    --shadow-card-hover: 0 12px 32px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+    --shadow-product: 0 20px 40px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
 
-    /* Transitions */
-    --transition-micro: transform 0.15s cubic-bezier(0.25, 1, 0.5, 1);
+    /* Smooth Micro Transitions */
+    --transition-fast: all 0.15s cubic-bezier(0.25, 1, 0.5, 1);
     --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-bounce: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /* --------------------------------------------------------------------------
-   2. Reset & Universal Principles
+   2. Reset & Core Base
    -------------------------------------------------------------------------- */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -77,144 +76,100 @@ html {
 body {
     font-family: var(--font-family);
     font-size: 17px;
-    line-height: 1.47;
-    letter-spacing: -0.374px;
-    color: #000000;
+    line-height: 1.47059;
+    letter-spacing: -0.022em;
+    color: var(--color-ink-body);
     background-color: #ffffff;
     overflow-x: hidden;
 }
 
+/* Selection */
+::selection {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
 /* --------------------------------------------------------------------------
-   3. Typography Classes (Pure Black Text)
+   3. Apple Studio Typography Scale
    -------------------------------------------------------------------------- */
 .hero-display {
     font-size: 56px;
-    font-weight: 600;
-    line-height: 1.07;
-    letter-spacing: -0.028em;
-    color: #000000;
+    font-weight: 700;
+    line-height: 1.07143;
+    letter-spacing: -0.035em;
+    color: var(--color-ink-black);
 }
 
 .display-lg {
     font-size: 40px;
-    font-weight: 600;
-    line-height: 1.10;
-    letter-spacing: -0.018em;
-    color: #000000;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: var(--color-ink-black);
 }
 
 .display-md {
-    font-size: 34px;
+    font-size: 32px;
     font-weight: 600;
-    line-height: 1.47;
-    letter-spacing: -0.374px;
-    color: #000000;
+    line-height: 1.1875;
+    letter-spacing: -0.02em;
+    color: var(--color-ink-black);
 }
 
 .lead-text {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 400;
-    line-height: 1.14;
-    letter-spacing: 0;
-    color: #1d1d1f;
-}
-
-.tagline-text {
-    font-size: 21px;
-    font-weight: 600;
-    line-height: 1.19;
-    letter-spacing: 0.231px;
-    color: #000000;
+    line-height: 1.33333;
+    letter-spacing: -0.015em;
+    color: var(--color-ink-muted);
 }
 
 .body-strong {
     font-size: 17px;
     font-weight: 600;
-    line-height: 1.24;
-    letter-spacing: -0.374px;
-    color: #000000;
+    line-height: 1.47;
+    letter-spacing: -0.022em;
+    color: var(--color-ink-black);
 }
 
 .body-text {
     font-size: 17px;
     font-weight: 400;
-    line-height: 1.47;
-    letter-spacing: -0.374px;
-    color: #1d1d1f;
+    line-height: 1.47059;
+    letter-spacing: -0.022em;
+    color: var(--color-ink-body);
 }
 
-.dense-link {
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 2.41;
-    color: #1d1d1f;
-}
-
-.caption-text {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.43;
-    letter-spacing: -0.224px;
-    color: #333333;
-}
-
-.caption-strong {
-    font-size: 14px;
+.eyebrow-chip {
+    font-size: 12px;
     font-weight: 600;
-    line-height: 1.29;
-    letter-spacing: -0.224px;
-    color: #000000;
-}
-
-.button-utility-text {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.29;
-    letter-spacing: -0.224px;
-    color: #000000;
-}
-
-.fine-print-text {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.3;
-    letter-spacing: -0.12px;
-    color: #666666;
-}
-
-.nav-link-text {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.0;
-    letter-spacing: -0.12px;
-    color: #000000;
-}
-
-/* Links */
-a {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
     color: var(--color-primary);
-    text-decoration: none;
-    transition: var(--transition-micro);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
 }
 
-a:hover {
-    text-decoration: underline;
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #34c759;
+    box-shadow: 0 0 0 3px rgba(52, 199, 89, 0.2);
+    animation: pulseDot 2s infinite ease-in-out;
 }
 
-.link-on-dark {
-    color: var(--color-primary);
-}
-
-/* Focus styles */
-:focus-visible {
-    outline: 2px solid var(--color-primary-focus);
-    outline-offset: 2px;
+@keyframes pulseDot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.15); }
 }
 
 /* --------------------------------------------------------------------------
-   4. Component Grammars & Buttons
+   4. Interactive Capsule Buttons & Control Grammars
    -------------------------------------------------------------------------- */
-/* Primary Capsule Pill CTA */
+/* Action Blue Pill Button */
 .btn-primary-pill {
     display: inline-flex;
     align-items: center;
@@ -223,88 +178,90 @@ a:hover {
     background-color: var(--color-primary);
     color: #ffffff !important;
     font-size: 17px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1;
-    padding: 11px 22px;
+    padding: 12px 24px;
     border-radius: var(--radius-pill);
     border: none;
     cursor: pointer;
     text-decoration: none !important;
-    transition: var(--transition-micro);
+    transition: var(--transition-bounce);
     user-select: none;
+    box-shadow: 0 2px 8px rgba(0, 102, 204, 0.25);
 }
 
 .btn-primary-pill:hover {
     background-color: var(--color-primary-hover);
-    text-decoration: none !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(0, 102, 204, 0.35);
 }
 
 .btn-primary-pill:active {
-    transform: scale(0.95);
+    transform: scale(0.96);
 }
 
-/* Secondary Ghost Pill CTA */
+/* Secondary White Capsule Pill */
 .btn-secondary-pill {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
     background-color: #ffffff;
-    color: #000000 !important;
+    color: var(--color-ink-black) !important;
     font-size: 17px;
     font-weight: 500;
     line-height: 1;
-    padding: 11px 22px;
+    padding: 12px 24px;
     border-radius: var(--radius-pill);
-    border: 1px solid #d0d0d0;
+    border: 1px solid var(--color-border-hairline);
     cursor: pointer;
     text-decoration: none !important;
-    transition: var(--transition-micro);
+    transition: var(--transition-smooth);
     user-select: none;
 }
 
 .btn-secondary-pill:hover {
-    border-color: #000000;
-    background-color: #f8f8fa;
-    text-decoration: none !important;
+    border-color: var(--color-ink-black);
+    background-color: var(--color-canvas-parchment);
 }
 
 .btn-secondary-pill:active {
-    transform: scale(0.95);
+    transform: scale(0.96);
 }
 
-/* Configurator Option Chips */
+/* Segmented Configurator Filter Chips */
 .configurator-chip {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
-    color: #000000;
+    color: var(--color-ink-body);
     font-size: 14px;
     font-weight: 500;
-    padding: 10px 18px;
+    padding: 10px 20px;
     border-radius: var(--radius-pill);
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--color-border-hairline);
     cursor: pointer;
     transition: var(--transition-smooth);
     user-select: none;
 }
 
 .configurator-chip:hover {
-    border-color: #000000;
+    border-color: var(--color-ink-black);
+    color: var(--color-ink-black);
 }
 
 .configurator-chip.selected {
-    border: 2px solid #0066cc;
+    background-color: #0066cc;
+    color: #ffffff;
+    border-color: #0066cc;
     font-weight: 600;
-    color: #0066cc;
-    background-color: #f0f7ff;
+    box-shadow: 0 2px 10px rgba(0, 102, 204, 0.25);
 }
 
 /* --------------------------------------------------------------------------
-   5. Two-Row Navigation Structure (White Canvas)
+   5. Two-Row Navigation (Pure White + Frosted Glass)
    -------------------------------------------------------------------------- */
-/* Row 1: Global Nav Bar (Slim, White Background, 44px) */
 .global-nav {
     position: fixed;
     top: 0;
@@ -312,7 +269,7 @@ a:hover {
     width: 100%;
     height: 44px;
     background-color: #ffffff;
-    border-bottom: 1px solid #e5e5ea;
+    border-bottom: 1px solid var(--color-border-hairline);
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -329,13 +286,13 @@ a:hover {
 }
 
 .global-nav-brand {
-    color: #000000;
+    color: var(--color-ink-black);
     font-size: 14px;
     font-weight: 600;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.015em;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     text-decoration: none !important;
 }
 
@@ -353,15 +310,15 @@ a:hover {
 }
 
 .global-nav-list a {
-    color: #333333;
+    color: var(--color-ink-muted);
     font-size: 12px;
     font-weight: 400;
-    letter-spacing: -0.12px;
+    letter-spacing: -0.01em;
     transition: color 0.2s ease;
 }
 
 .global-nav-list a:hover {
-    color: #000000;
+    color: var(--color-ink-black);
     text-decoration: none;
 }
 
@@ -374,7 +331,7 @@ a:hover {
 .global-nav-icon-btn {
     background: transparent;
     border: none;
-    color: #333333;
+    color: var(--color-ink-muted);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -384,25 +341,20 @@ a:hover {
 }
 
 .global-nav-icon-btn:hover {
-    color: #000000;
+    color: var(--color-ink-black);
 }
 
-.global-nav-icon-btn svg {
-    width: 16px;
-    height: 16px;
-}
-
-/* Row 2: Sub-Nav Frosted Glass (White 82% Opacity) */
+/* Sub-Nav Sticky Bar */
 .sub-nav-frosted {
     position: sticky;
     top: 44px;
     left: 0;
     width: 100%;
     height: 52px;
-    background-color: rgba(255, 255, 255, 0.88);
+    background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border-bottom: 1px solid #e5e5ea;
+    border-bottom: 1px solid var(--color-border-hairline);
     z-index: 999;
     display: flex;
     align-items: center;
@@ -421,9 +373,8 @@ a:hover {
 .sub-nav-title {
     font-size: 21px;
     font-weight: 600;
-    line-height: 1.19;
-    color: #000000;
-    letter-spacing: 0.231px;
+    color: var(--color-ink-black);
+    letter-spacing: 0.01em;
 }
 
 .sub-nav-menu {
@@ -436,8 +387,7 @@ a:hover {
 .sub-nav-menu a {
     font-size: 14px;
     font-weight: 400;
-    color: #1d1d1f;
-    letter-spacing: -0.224px;
+    color: var(--color-ink-body);
     transition: color 0.2s ease;
 }
 
@@ -448,7 +398,7 @@ a:hover {
 
 .sub-nav-cta {
     font-size: 14px;
-    padding: 6px 14px;
+    padding: 7px 16px;
 }
 
 /* Mobile Toggle */
@@ -456,22 +406,17 @@ a:hover {
     display: none;
     background: transparent;
     border: none;
-    color: #000000;
+    color: var(--color-ink-black);
     cursor: pointer;
     padding: 4px;
 }
 
-.mobile-menu-btn svg {
-    width: 20px;
-    height: 20px;
-}
-
 /* --------------------------------------------------------------------------
-   6. Full-Bleed Tile Rhythm System (All White / Light Parchment)
+   6. Sections Layout (Pure White Pedestal Rhythm)
    -------------------------------------------------------------------------- */
 .product-tile {
     width: 100%;
-    padding: 80px 24px;
+    padding: 96px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -479,7 +424,11 @@ a:hover {
     position: relative;
     box-sizing: border-box;
     background-color: #ffffff;
-    border-bottom: 1px solid #f0f0f4;
+    border-bottom: 1px solid var(--color-border-hairline);
+}
+
+.product-tile-alt {
+    background-color: var(--color-canvas-parchment);
 }
 
 .tile-container {
@@ -491,29 +440,13 @@ a:hover {
     align-items: center;
 }
 
-/* All Sections Clean Light Backgrounds */
-.product-tile-light,
-.product-tile-parchment,
-.product-tile-dark,
-.product-tile-dark-2,
-.product-tile-dark-3 {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-.product-tile-parchment {
-    background-color: #f8f8fa;
-}
-
-.tile-headline,
-.tile-subheadline,
-h1, h2, h3, h4 {
-    color: #000000 !important;
+.tile-headline {
+    margin-bottom: 12px;
 }
 
 .tile-subheadline {
-    margin-bottom: 20px;
-    color: #424245 !important;
+    margin-bottom: 32px;
+    max-width: 680px;
 }
 
 .tile-cta-group {
@@ -524,67 +457,62 @@ h1, h2, h3, h4 {
     margin-bottom: 48px;
 }
 
-.tile-visual {
-    width: 100%;
-    max-width: 840px;
-    margin-top: 16px;
-}
-
 /* --------------------------------------------------------------------------
-   7. Hero Section
+   7. Hero Section & Product Visual Card
    -------------------------------------------------------------------------- */
 .hero-tile {
-    padding-top: 100px;
-    padding-bottom: 80px;
+    padding-top: 110px;
+    padding-bottom: 96px;
     background-color: #ffffff;
 }
 
-.hero-subtitle-chip {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--color-primary);
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-}
-
 .hero-title-main {
-    margin-bottom: 16px;
-    max-width: 800px;
-    color: #000000;
+    margin-bottom: 20px;
+    max-width: 840px;
 }
 
 .hero-description-text {
     max-width: 640px;
-    color: #333333 !important;
-    font-size: 21px;
-    line-height: 1.38;
-    margin-bottom: 28px;
+    margin-bottom: 36px;
 }
 
-/* Code Card Visual - Crisp White Slate with Border & Shadow */
+.hero-visual {
+    width: 100%;
+    max-width: 860px;
+    margin-top: 16px;
+}
+
+/* Hero Code Visual Card with Soft Shadow Pedestal */
 .hero-code-card {
-    background-color: #f8f9fa;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--product-shadow);
-    padding: 24px 32px;
+    background-color: #ffffff;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-product);
+    padding: 32px 40px;
     text-align: left;
-    color: #1d1d1f;
+    color: var(--color-ink-black);
     font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
     font-size: 14px;
-    line-height: 1.6;
-    border: 1px solid #e0e0e8;
+    line-height: 1.65;
+    border: 1px solid var(--color-border-hairline);
     position: relative;
     overflow: hidden;
 }
 
 .hero-code-card .card-dots {
     display: flex;
-    gap: 8px;
-    margin-bottom: 16px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--color-border-hairline);
 }
 
-.hero-code-card .dot {
+.card-dots-left {
+    display: flex;
+    gap: 8px;
+}
+
+.card-dots .dot {
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -593,17 +521,23 @@ h1, h2, h3, h4 {
 .dot-yellow { background-color: #ffbd2e; }
 .dot-green { background-color: #27c93f; }
 
-.kw { color: #d73a49; font-weight: 600; }
-.var { color: #005cc5; }
-.str { color: #032f62; }
-.cm { color: #6a737d; }
+.card-filename {
+    font-size: 12px;
+    color: var(--color-ink-subtle);
+    font-weight: 500;
+}
+
+.kw { color: #0066cc; font-weight: 600; }
+.var { color: #000000; font-weight: 600; }
+.str { color: #28a745; }
+.cm { color: #86868b; }
 
 /* --------------------------------------------------------------------------
-   8. About Section (White Background, Black Text)
+   8. About Section (Editorial Studio)
    -------------------------------------------------------------------------- */
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr;
     gap: 48px;
     align-items: center;
     width: 100%;
@@ -612,45 +546,51 @@ h1, h2, h3, h4 {
 }
 
 .about-text-column p {
-    margin-bottom: 18px;
-    color: #1d1d1f;
+    margin-bottom: 20px;
+    color: var(--color-ink-body);
 }
 
 .about-stats-column {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
-/* Stat Tile Card - White Surface Grammar */
 .apple-stat-card {
     background: #ffffff;
-    border: 1px solid #e0e0e5;
+    border: 1px solid var(--color-border-hairline);
     border-radius: var(--radius-lg);
     padding: 28px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    box-shadow: var(--shadow-subtle);
+    transition: var(--transition-smooth);
+}
+
+.apple-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: var(--color-ink-black);
 }
 
 .stat-number {
-    font-size: 48px;
-    font-weight: 600;
-    line-height: 1.05;
-    color: #000000 !important;
-    letter-spacing: -0.02em;
-    margin-bottom: 4px;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--color-ink-black);
+    letter-spacing: -0.03em;
+    margin-bottom: 6px;
 }
 
 .stat-label {
     font-size: 14px;
-    color: #555555 !important;
-    font-weight: 400;
+    color: var(--color-ink-muted);
+    font-weight: 500;
 }
 
 /* --------------------------------------------------------------------------
-   9. Skills Section (Light Parchment Background)
+   9. Skills Section & Utility Grid
    -------------------------------------------------------------------------- */
 .configurator-controls {
     display: flex;
@@ -667,35 +607,36 @@ h1, h2, h3, h4 {
     gap: 20px;
 }
 
-/* Store Utility Card Grammar */
 .store-utility-card {
     background-color: #ffffff;
-    border: 1px solid #e0e0e5;
+    border: 1px solid var(--color-border-hairline);
     border-radius: var(--radius-lg);
-    padding: 24px;
+    padding: 28px;
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: var(--transition-smooth);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    box-shadow: var(--shadow-subtle);
 }
 
 .store-utility-card:hover {
-    border-color: #000000;
+    border-color: var(--color-ink-black);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card-hover);
 }
 
 .skill-card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .skill-name {
     font-size: 17px;
     font-weight: 600;
-    color: #000000;
+    color: var(--color-ink-black);
 }
 
 .skill-val {
@@ -707,10 +648,10 @@ h1, h2, h3, h4 {
 .skill-bar-track {
     width: 100%;
     height: 6px;
-    background-color: #e5e5ea;
+    background-color: #f0f0f4;
     border-radius: var(--radius-pill);
     overflow: hidden;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
 .skill-bar-fill {
@@ -721,20 +662,20 @@ h1, h2, h3, h4 {
 }
 
 /* --------------------------------------------------------------------------
-   10. Projects Showcase (White Cards, Black Fonts)
+   10. Projects Showcase (Gallery Cards)
    -------------------------------------------------------------------------- */
 .projects-grid-apple {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-    gap: 24px;
+    gap: 28px;
     margin-top: 32px;
 }
 
 .project-tile-card {
     background-color: #ffffff;
-    border: 1px solid #e0e0e5;
-    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border-hairline);
+    border-radius: var(--radius-xl);
     padding: 32px;
     text-align: left;
     display: flex;
@@ -742,26 +683,27 @@ h1, h2, h3, h4 {
     justify-content: space-between;
     overflow: hidden;
     transition: var(--transition-smooth);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    box-shadow: var(--shadow-card);
 }
 
 .project-tile-card:hover {
-    border-color: #000000;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    border-color: var(--color-ink-black);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
 }
 
 .project-render-wrapper {
     width: 100%;
     height: 220px;
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-md);
     overflow: hidden;
     margin-bottom: 24px;
-    background: #f5f5f8;
+    background: #f8f8fa;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    border: 1px solid #e5e5ea;
+    border: 1px solid var(--color-border-hairline);
 }
 
 .project-render-wrapper svg {
@@ -775,22 +717,22 @@ h1, h2, h3, h4 {
     font-weight: 600;
     color: var(--color-primary);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.05em;
     margin-bottom: 6px;
 }
 
 .project-card-title {
     font-size: 24px;
-    font-weight: 600;
-    color: #000000 !important;
+    font-weight: 700;
+    color: var(--color-ink-black) !important;
     margin-bottom: 10px;
 }
 
 .project-card-desc {
     font-size: 15px;
-    color: #424245 !important;
-    margin-bottom: 20px;
-    line-height: 1.45;
+    color: var(--color-ink-muted) !important;
+    margin-bottom: 24px;
+    line-height: 1.46;
 }
 
 .project-tags-row {
@@ -802,21 +744,15 @@ h1, h2, h3, h4 {
 
 .tag-chip {
     font-size: 12px;
-    color: #333333;
+    font-weight: 500;
+    color: var(--color-ink-body);
     background: #f0f0f4;
-    padding: 4px 10px;
+    padding: 5px 12px;
     border-radius: var(--radius-pill);
-    border: 1px solid #e0e0e5;
-}
-
-.project-links-row {
-    display: flex;
-    gap: 16px;
-    align-items: center;
 }
 
 /* --------------------------------------------------------------------------
-   11. Experience Section (Feature Breakdown)
+   11. Timeline Experience Section
    -------------------------------------------------------------------------- */
 .timeline-apple {
     width: 100%;
@@ -825,7 +761,7 @@ h1, h2, h3, h4 {
     text-align: left;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 36px;
     position: relative;
 }
 
@@ -836,7 +772,7 @@ h1, h2, h3, h4 {
     bottom: 10px;
     left: 20px;
     width: 2px;
-    background-color: #e0e0e5;
+    background-color: var(--color-border-hairline);
 }
 
 .timeline-row {
@@ -864,25 +800,25 @@ h1, h2, h3, h4 {
 
 .timeline-item-title {
     font-size: 21px;
-    font-weight: 600;
-    color: #000000 !important;
+    font-weight: 700;
+    color: var(--color-ink-black) !important;
     margin-bottom: 2px;
 }
 
 .timeline-item-company {
     font-size: 15px;
-    color: #6e6e73;
+    color: var(--color-ink-subtle);
     margin-bottom: 8px;
 }
 
 .timeline-item-desc {
     font-size: 16px;
-    color: #1d1d1f !important;
+    color: var(--color-ink-body) !important;
     line-height: 1.45;
 }
 
 /* --------------------------------------------------------------------------
-   12. Contact Form (Clean White Inputs, Black Text)
+   12. Contact Form (Apple Search & Utility Input Grammar)
    -------------------------------------------------------------------------- */
 .contact-form-container {
     width: 100%;
@@ -901,20 +837,20 @@ h1, h2, h3, h4 {
 .apple-form-label {
     font-size: 14px;
     font-weight: 600;
-    color: #000000 !important;
+    color: var(--color-ink-black) !important;
 }
 
 .apple-form-input,
 .apple-form-textarea {
     width: 100%;
     background-color: #ffffff;
-    border: 1px solid #d0d0d5;
+    border: 1px solid var(--color-border-hairline);
     border-radius: var(--radius-pill);
     padding: 14px 22px;
     font-family: var(--font-family);
     font-size: 16px;
-    color: #000000;
-    transition: border-color 0.2s ease;
+    color: var(--color-ink-black);
+    transition: var(--transition-smooth);
 }
 
 .apple-form-textarea {
@@ -941,13 +877,13 @@ h1, h2, h3, h4 {
 }
 
 /* --------------------------------------------------------------------------
-   13. Footer (White / Light Parchment, Pure Black Fonts)
+   13. Footer
    -------------------------------------------------------------------------- */
 .apple-footer {
-    background-color: #f8f8fa;
-    color: #1d1d1f;
+    background-color: var(--color-canvas-parchment);
+    color: var(--color-ink-body);
     padding: 64px 24px 40px 24px;
-    border-top: 1px solid #e0e0e5;
+    border-top: 1px solid var(--color-border-hairline);
     text-align: left;
 }
 
@@ -966,9 +902,9 @@ h1, h2, h3, h4 {
 .footer-col-title {
     font-size: 14px;
     font-weight: 600;
-    color: #000000 !important;
+    color: var(--color-ink-black) !important;
     margin-bottom: 8px;
-    letter-spacing: -0.224px;
+    letter-spacing: -0.015em;
 }
 
 .footer-links-list {
@@ -979,17 +915,17 @@ h1, h2, h3, h4 {
     font-size: 17px;
     font-weight: 400;
     line-height: 2.41;
-    color: #333333;
+    color: var(--color-ink-muted);
     transition: color 0.2s ease;
 }
 
 .footer-links-list li a:hover {
-    color: #000000;
+    color: var(--color-ink-black);
     text-decoration: underline;
 }
 
 .footer-legal-bar {
-    border-top: 1px solid #e0e0e5;
+    border-top: 1px solid var(--color-border-hairline);
     padding-top: 20px;
     display: flex;
     justify-content: space-between;
@@ -997,11 +933,11 @@ h1, h2, h3, h4 {
     flex-wrap: wrap;
     gap: 16px;
     font-size: 12px;
-    color: #666666;
+    color: var(--color-ink-faint);
 }
 
 /* --------------------------------------------------------------------------
-   14. Terminal Window
+   14. Terminal Overlay Window
    -------------------------------------------------------------------------- */
 .terminal-overlay {
     position: fixed;
@@ -1079,7 +1015,7 @@ h1, h2, h3, h4 {
 .terminal-input:focus { outline: none; }
 
 /* --------------------------------------------------------------------------
-   15. Responsiveness
+   15. Responsive Breakpoints
    -------------------------------------------------------------------------- */
 @media (max-width: 833px) {
     .global-nav-list { display: none; }
@@ -1093,9 +1029,9 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 640px) {
-    .product-tile { padding: 56px 16px; }
+    .product-tile { padding: 64px 16px; }
     .hero-display { font-size: 34px; }
-    .lead-text { font-size: 22px; }
+    .lead-text { font-size: 20px; }
     .tile-cta-group { flex-direction: column; width: 100%; }
     .btn-primary-pill, .btn-secondary-pill { width: 100%; }
 }

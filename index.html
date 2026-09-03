@@ -8,15 +8,15 @@
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Custom CSS (Apple Design System) -->
+    <!-- Custom CSS (Apple Studio Edition) -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- 1. Global Navigation Bar (Slim 44px Black Bar) -->
+    <!-- 1. Global Navigation Bar (Slim 44px Pure White Bar) -->
     <header class="global-nav">
         <div class="global-nav-container">
             <a href="#" class="global-nav-brand">
@@ -56,7 +56,7 @@
     <!-- 2. Sub-Nav Frosted Glass (52px Sticky Bar) -->
     <nav class="sub-nav-frosted" id="sub-nav">
         <div class="sub-nav-container">
-            <span class="sub-nav-title">Portfolio</span>
+            <span class="sub-nav-title">Studio Edition</span>
             <ul class="sub-nav-menu">
                 <li><a href="#hero">Overview</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -68,63 +68,68 @@
     </nav>
 
     <main>
-        <!-- 3. Section 1: Hero Tile (Light Surface #ffffff) -->
-        <section class="product-tile product-tile-light hero-tile" id="hero">
+        <!-- 3. Section 1: Hero Tile (White Canvas Studio) -->
+        <section class="product-tile hero-tile" id="hero">
             <div class="tile-container">
-                <span class="hero-subtitle-chip">Available for Opportunities</span>
+                <div class="eyebrow-chip">
+                    <span class="status-dot"></span> Available for Opportunities
+                </div>
                 <h1 class="hero-display hero-title-main">
-                    Building Digital Experiences. That Drive Impact.
+                    Building Digital Experiences.<br>Designed with Precision.
                 </h1>
                 <p class="lead-text hero-description-text">
-                    Hi, I'm Imasha Karunathilaka. I am a software engineer and strategist specializing in building responsive web applications, robust database systems, and go-to-market strategies.
+                    Software engineer & strategist building responsive web applications, high-performance database architectures, and commercial product positioning.
                 </p>
                 <div class="tile-cta-group">
-                    <a href="#projects" class="btn-primary-pill">View Projects</a>
+                    <a href="#projects" class="btn-primary-pill">Explore Showcase</a>
                     <a href="#contact" class="btn-secondary-pill">Get In Touch</a>
                 </div>
                 
-                <div class="tile-visual">
-                    <!-- Code Card Render with Apple System Product Shadow -->
+                <div class="hero-visual">
+                    <!-- Studio Code Card Pedestal -->
                     <div class="hero-code-card">
                         <div class="card-dots">
-                            <span class="dot dot-red"></span>
-                            <span class="dot dot-yellow"></span>
-                            <span class="dot dot-green"></span>
+                            <div class="card-dots-left">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="card-filename">developer.ts</span>
                         </div>
-                        <pre><code><span class="kw">const</span> <span class="var">developer</span> = {
-    name: <span class="str">'Imasha Karunathilaka'</span>,
-    role: <span class="str">'Software Engineer & Strategist'</span>,
-    skills: [<span class="str">'React'</span>, <span class="str">'JavaScript'</span>, <span class="str">'MySQL'</span>, <span class="str">'Firebase'</span>, <span class="str">'GTM Strategy'</span>],
-    philosophy: <span class="str">'Clean Code & Usable Systems'</span>
-};</code></pre>
+                        <pre><code><span class="kw">interface</span> <span class="var">Engineer</span> {
+    name: <span class="str">'Imasha Karunathilaka'</span>;
+    role: <span class="str">'Full-Stack Engineer & Business Strategist'</span>;
+    stack: [<span class="str">'TypeScript'</span>, <span class="str">'React'</span>, <span class="str">'MySQL'</span>, <span class="str">'Firebase'</span>, <span class="str">'GTM Strategy'</span>];
+    focus: <span class="str">'High Contrast UI & Modular Architectures'</span>;
+}</code></pre>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 4. Section 2: About Tile (Dark Surface #272729) -->
-        <section class="product-tile product-tile-dark" id="about">
+        <!-- 4. Section 2: About Tile (Pure White Canvas, Black Fonts) -->
+        <section class="product-tile" id="about">
             <div class="tile-container">
-                <span class="hero-subtitle-chip">Philosophy & Background</span>
+                <div class="eyebrow-chip">PHILOSOPHY & VISION</div>
                 <h2 class="display-lg tile-headline">Engineering systems from database to interface.</h2>
-                <p class="lead-text tile-subheadline" style="max-width: 720px;">
-                    I design software systems from foundational database schemas up to responsive interfaces and commercial positioning.
+                <p class="lead-text tile-subheadline">
+                    Combining logical database schemas with high-contrast, human-centered UI design.
                 </p>
 
                 <div class="about-grid">
                     <div class="about-text-column">
                         <p class="body-text">
-                            My expertise covers full-stack web applications, database schema designs, UML structural mapping, and business analysis. I focus on developing code bases that are clean, modular, and optimized for speed and user experience.
+                            My expertise spans full-stack web development, database modeling, UML system architecture, and commercial business analysis. I focus on developing clean, maintainable code bases that prioritize user speed and visual clarity.
                         </p>
                         <p class="body-text">
-                            Whether designing a five-page responsive dashboard or formulating go-to-market strategies for smart systems, I strive to make sure that logical architectures and usability go hand-in-hand.
+                            Whether architecting relational databases or formulating go-to-market strategies for smart appliances, I ensure logical integrity and intuitive UX work seamlessly together.
                         </p>
                     </div>
 
                     <div class="about-stats-column">
                         <div class="apple-stat-card">
                             <span class="stat-number">3+</span>
-                            <span class="stat-label">Years of Engineering Experience</span>
+                            <span class="stat-label">Years Engineering Experience</span>
                         </div>
                         <div class="apple-stat-card">
                             <span class="stat-number">20+</span>
@@ -139,23 +144,22 @@
             </div>
         </section>
 
-        <!-- 5. Section 3: Skills Tile (Parchment Surface #f5f5f7) -->
-        <section class="product-tile product-tile-parchment" id="skills">
+        <!-- 5. Section 3: Skills Tile (Parchment White Accent Background) -->
+        <section class="product-tile product-tile-alt" id="skills">
             <div class="tile-container">
-                <span class="hero-subtitle-chip">Professional Toolkit</span>
+                <div class="eyebrow-chip">TECHNICAL TOOLKIT</div>
                 <h2 class="display-lg tile-headline">Designed for scale. Built for performance.</h2>
-                <p class="tile-subheadline lead-text">Selected technical proficiencies across engineering & architecture.</p>
+                <p class="tile-subheadline lead-text">Core technical proficiencies across engineering & architecture.</p>
 
-                <!-- Configurator Option Chips -->
+                <!-- Configurator Controls -->
                 <div class="configurator-controls">
-                    <button class="configurator-chip selected" data-tab="frontend">Frontend Stack</button>
+                    <button class="configurator-chip selected" data-tab="frontend">Frontend</button>
                     <button class="configurator-chip" data-tab="backend">Backend & Database</button>
                     <button class="configurator-chip" data-tab="tools">Design & Strategy</button>
                 </div>
 
-                <!-- Skills Utility Cards Grid -->
+                <!-- Skills Cards Grid -->
                 <div class="skills-grid-container" id="skills-container">
-                    <!-- Frontend Content (Default) -->
                     <div class="store-utility-card">
                         <div class="skill-card-header">
                             <span class="skill-name">React.js & React Ecosystem</span>
@@ -188,47 +192,47 @@
             </div>
         </section>
 
-        <!-- 6. Section 4: Projects Showcase Tile (Near-Black Tile 2 #2a2a2c) -->
-        <section class="product-tile product-tile-dark-2" id="projects">
+        <!-- 6. Section 4: Projects Showcase Tile (Pure White Surface, Jet Black Fonts) -->
+        <section class="product-tile" id="projects">
             <div class="tile-container">
-                <span class="hero-subtitle-chip">Showcase</span>
+                <div class="eyebrow-chip">FEATURED WORK</div>
                 <h2 class="display-lg tile-headline">Featured Work & Applications.</h2>
-                <p class="tile-subheadline lead-text">Clean implementations across web, database systems, and GTM strategy.</p>
+                <p class="tile-subheadline lead-text">Clean implementations across web, database architectures, and GTM strategy.</p>
 
-                <!-- Project Category Filters -->
+                <!-- Project Filters -->
                 <div class="configurator-controls">
-                    <button class="configurator-chip configurator-chip-dark selected" data-filter="all">All Work</button>
-                    <button class="configurator-chip configurator-chip-dark" data-filter="web">Web & App</button>
-                    <button class="configurator-chip configurator-chip-dark" data-filter="system">Systems & Databases</button>
-                    <button class="configurator-chip configurator-chip-dark" data-filter="strategy">Marketing & Strategy</button>
+                    <button class="configurator-chip selected" data-filter="all">All Work</button>
+                    <button class="configurator-chip" data-filter="web">Web & App</button>
+                    <button class="configurator-chip" data-filter="system">Systems & Databases</button>
+                    <button class="configurator-chip" data-filter="strategy">Marketing & Strategy</button>
                 </div>
 
-                <!-- Projects Grid -->
+                <!-- Projects Gallery Grid -->
                 <div class="projects-grid-apple" id="projects-container">
                     <!-- Project 1 -->
                     <div class="project-tile-card" data-category="web">
                         <div class="project-render-wrapper">
                             <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="100%" height="100%" fill="#1a1a24" />
-                                <rect x="30" y="30" width="100" height="190" rx="8" fill="rgba(255,255,255,0.08)" />
-                                <rect x="150" y="30" width="100" height="190" rx="8" fill="rgba(255,255,255,0.08)" />
-                                <rect x="270" y="30" width="100" height="190" rx="8" fill="rgba(255,255,255,0.08)" />
-                                <rect x="40" y="45" width="80" height="24" rx="4" fill="#0066cc" />
-                                <rect x="160" y="45" width="80" height="35" rx="4" fill="rgba(255,255,255,0.15)" />
+                                <rect width="100%" height="100%" fill="#ffffff" />
+                                <rect x="20" y="30" width="100" height="190" rx="8" fill="#f5f5f7" stroke="#e0e0e5" />
+                                <rect x="150" y="30" width="100" height="190" rx="8" fill="#f5f5f7" stroke="#e0e0e5" />
+                                <rect x="280" y="30" width="100" height="190" rx="8" fill="#f5f5f7" stroke="#e0e0e5" />
+                                <rect x="30" y="45" width="80" height="24" rx="4" fill="#0066cc" />
+                                <rect x="160" y="45" width="80" height="35" rx="4" fill="#e5e5ea" />
                             </svg>
                         </div>
                         <div>
                             <span class="project-category-tag">Web Development</span>
                             <h3 class="project-card-title">TMS – Task Management System</h3>
-                            <p class="project-card-desc">An interactive frontend application for agile task tracking powered by Firebase Realtime Database state synchronization.</p>
+                            <p class="project-card-desc">Interactive frontend application for agile task tracking powered by Firebase Realtime Database state synchronization.</p>
                             <div class="project-tags-row">
                                 <span class="tag-chip">HTML5/CSS3</span>
                                 <span class="tag-chip">JavaScript</span>
                                 <span class="tag-chip">Firebase</span>
                             </div>
                         </div>
-                        <div class="project-links-row">
-                            <a href="#" class="btn-primary-pill" style="font-size: 14px; padding: 8px 16px;">View Demo</a>
+                        <div>
+                            <a href="#" class="btn-primary-pill" style="font-size: 14px; padding: 9px 18px;">View Demo</a>
                         </div>
                     </div>
 
@@ -236,23 +240,24 @@
                     <div class="project-tile-card" data-category="strategy">
                         <div class="project-render-wrapper">
                             <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="100%" height="100%" fill="#0d241d" />
-                                <circle cx="200" cy="110" r="45" fill="rgba(41, 151, 255, 0.15)" />
-                                <rect x="140" y="170" width="120" height="16" rx="8" fill="#2997ff" />
+                                <rect width="100%" height="100%" fill="#ffffff" />
+                                <circle cx="200" cy="110" r="50" fill="#f0f7ff" stroke="#0066cc" stroke-width="2" />
+                                <path d="M175,110 L200,85 L225,110 Z" fill="#0066cc" />
+                                <rect x="140" y="175" width="120" height="16" rx="8" fill="#0066cc" />
                             </svg>
                         </div>
                         <div>
                             <span class="project-category-tag">Marketing & Strategy</span>
                             <h3 class="project-card-title">AquaGrow Hydroponics</h3>
-                            <p class="project-card-desc">A comprehensive go-to-market strategy for a smart hydroponic appliance highlighting commercial positioning.</p>
+                            <p class="project-card-desc">Comprehensive go-to-market strategy for a smart hydroponic appliance highlighting commercial positioning.</p>
                             <div class="project-tags-row">
                                 <span class="tag-chip">GTM Strategy</span>
                                 <span class="tag-chip">Market Analysis</span>
                                 <span class="tag-chip">Team Futurix</span>
                             </div>
                         </div>
-                        <div class="project-links-row">
-                            <a href="#" class="btn-primary-pill" style="font-size: 14px; padding: 8px 16px;">Case Study</a>
+                        <div>
+                            <a href="#" class="btn-primary-pill" style="font-size: 14px; padding: 9px 18px;">Case Study</a>
                         </div>
                     </div>
 
@@ -260,22 +265,24 @@
                     <div class="project-tile-card" data-category="web">
                         <div class="project-render-wrapper">
                             <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="100%" height="100%" fill="#1f1824" />
-                                <path d="M40,180 L120,130 L200,150 L280,70 L360,110" fill="none" stroke="#2997ff" stroke-width="4" />
+                                <rect width="100%" height="100%" fill="#ffffff" />
+                                <rect x="30" y="40" width="340" height="170" rx="8" fill="#f8f8fa" stroke="#e0e0e5" />
+                                <path d="M50,160 L120,110 L190,130 L270,70 L350,100" fill="none" stroke="#0066cc" stroke-width="4" />
+                                <circle cx="270" cy="70" r="6" fill="#0066cc" />
                             </svg>
                         </div>
                         <div>
                             <span class="project-category-tag">Web Application</span>
                             <h3 class="project-card-title">Marketing Analytics Dashboard</h3>
-                            <p class="project-card-desc">A professional 5-page analytics interface built using React, React Router, Chart.js graphs, and Vite bundles.</p>
+                            <p class="project-card-desc">Professional 5-page analytics interface built using React, React Router, Chart.js graphs, and Vite bundles.</p>
                             <div class="project-tags-row">
                                 <span class="tag-chip">React</span>
                                 <span class="tag-chip">Chart.js</span>
                                 <span class="tag-chip">Vite</span>
                             </div>
                         </div>
-                        <div class="project-links-row">
-                            <a href="#" class="btn-primary-pill" style="font-size: 14px; padding: 8px 16px;">Live Dashboard</a>
+                        <div>
+                            <a href="#" class="btn-primary-pill" style="font-size: 14px; padding: 9px 18px;">Live Dashboard</a>
                         </div>
                     </div>
 
@@ -283,40 +290,40 @@
                     <div class="project-tile-card" data-category="system">
                         <div class="project-render-wrapper">
                             <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="100%" height="100%" fill="#181f28" />
-                                <rect x="60" y="50" width="100" height="110" rx="6" fill="rgba(255,255,255,0.1)" />
-                                <rect x="240" y="90" width="100" height="110" rx="6" fill="rgba(255,255,255,0.1)" />
-                                <line x1="160" y1="105" x2="240" y2="145" stroke="#2997ff" stroke-width="2" stroke-dasharray="4" />
+                                <rect width="100%" height="100%" fill="#ffffff" />
+                                <rect x="50" y="50" width="110" height="120" rx="8" fill="#f8f8fa" stroke="#e0e0e5" />
+                                <rect x="240" y="90" width="110" height="120" rx="8" fill="#f8f8fa" stroke="#e0e0e5" />
+                                <line x1="160" y1="110" x2="240" y2="150" stroke="#0066cc" stroke-width="2" stroke-dasharray="4" />
                             </svg>
                         </div>
                         <div>
                             <span class="project-category-tag">Database & Backend</span>
                             <h3 class="project-card-title">Attendance Management System</h3>
-                            <p class="project-card-desc">System with complete relational schemas, UML architecture blueprints, ER diagrams, and optimized MySQL stored procedures.</p>
+                            <p class="project-card-desc">System with relational schemas, UML architecture blueprints, ER diagrams, and optimized MySQL stored procedures.</p>
                             <div class="project-tags-row">
                                 <span class="tag-chip">MySQL</span>
                                 <span class="tag-chip">UML Design</span>
                                 <span class="tag-chip">Procedures</span>
                             </div>
                         </div>
-                        <div class="project-links-row">
-                            <a href="#" class="btn-primary-pill" style="font-size: 14px; padding: 8px 16px;">View Schemas</a>
+                        <div>
+                            <a href="#" class="btn-primary-pill" style="font-size: 14px; padding: 9px 18px;">View Schemas</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- GitHub Stats Canvas Container -->
-                <div style="width: 100%; max-width: 680px; margin-top: 48px; background: rgba(255,255,255,0.03); padding: 24px; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.08);">
-                    <h3 class="caption-strong" style="color: var(--color-body-on-dark); margin-bottom: 16px; text-align: center;">GitHub Language Stack</h3>
+                <!-- GitHub Language Stack Chart -->
+                <div style="width: 100%; max-width: 680px; margin-top: 48px; background: #ffffff; padding: 28px; border-radius: var(--radius-xl); border: 1px solid var(--color-border-hairline); box-shadow: var(--shadow-subtle);">
+                    <h3 class="caption-strong" style="color: #000000; margin-bottom: 16px; text-align: center;">GitHub Language Stack</h3>
                     <canvas id="githubStatsChart" height="200"></canvas>
                 </div>
             </div>
         </section>
 
-        <!-- 7. Section 5: Experience Timeline (Light Surface #ffffff) -->
-        <section class="product-tile product-tile-light" id="experience">
+        <!-- 7. Section 5: Experience Timeline (White Canvas) -->
+        <section class="product-tile product-tile-alt" id="experience">
             <div class="tile-container">
-                <span class="hero-subtitle-chip">Timeline</span>
+                <div class="eyebrow-chip">TIMELINE</div>
                 <h2 class="display-lg tile-headline">Professional Journey.</h2>
                 <p class="tile-subheadline lead-text">Track record across software engineering & system design.</p>
 
@@ -348,10 +355,10 @@
             </div>
         </section>
 
-        <!-- 8. Section 6: Contact Tile (Dark Surface #272729) -->
-        <section class="product-tile product-tile-dark" id="contact">
+        <!-- 8. Section 6: Contact Tile (Clean Studio Form) -->
+        <section class="product-tile" id="contact">
             <div class="tile-container">
-                <span class="hero-subtitle-chip">Let's Work Together</span>
+                <div class="eyebrow-chip">LET'S WORK TOGETHER</div>
                 <h2 class="display-lg tile-headline">Get In Touch.</h2>
                 <p class="tile-subheadline lead-text">Have a project idea or inquiry? Send a direct message.</p>
 
@@ -390,7 +397,7 @@
         </section>
     </main>
 
-    <!-- 9. Footer (Parchment Surface #f5f5f7 with Dense Link Leading 2.41) -->
+    <!-- 9. Footer (Parchment Footnote Grid) -->
     <footer class="apple-footer">
         <div class="footer-inner">
             <div class="footer-nav-grid">
@@ -424,7 +431,7 @@
 
             <div class="footer-legal-bar">
                 <div>Copyright &copy; 2026 Imasha Karunathilaka. All rights reserved.</div>
-                <div>Designed in accordance with Apple Web Specifications.</div>
+                <div>Designed in accordance with Apple Studio Web Specifications.</div>
             </div>
         </div>
     </footer>
@@ -436,7 +443,7 @@
                 <span style="width: 10px; height: 10px; border-radius: 50%; background: #ff5f56; cursor: pointer;" id="terminal-close"></span>
                 <span style="width: 10px; height: 10px; border-radius: 50%; background: #ffbd2e;"></span>
                 <span style="width: 10px; height: 10px; border-radius: 50%; background: #27c93f;"></span>
-                <div class="terminal-title">imasha@apple-spec:~</div>
+                <div class="terminal-title">imasha@apple-studio:~</div>
             </div>
             <div class="terminal-body" id="terminal-body">
                 <div><span class="terminal-prompt">guest@portfolio:~$</span> Welcome to Imasha's terminal. Type 'help' for available commands.</div>
