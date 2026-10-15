@@ -402,18 +402,19 @@ const PROJECT_CASE_STUDIES = {
         github: 'https://github.com/Imashaidk/EventHub'
     },
     'quantedge': {
-        badge: 'Quantitative & FinTech Analytics',
+        badge: 'FinTech Challenge Semifinalist',
         title: 'QuantEdge 1.0 — Quantitative Financial Analytics',
-        role: 'Quantitative Data Analyst',
+        role: 'Quantitative Data Analyst & Semifinalist',
         body: `
-            <p class="about-p">Constructed an analytical time-series toolkit evaluating equity and market asset performance using statistical momentum and volatility indicators.</p>
-            <h4 class="modal-section-h4">Analytical Capabilities</h4>
+            <p class="about-p">Ongoing competition entry proudly advanced to the Semifinals. QuantEdge 1.0 is an analytical toolkit evaluating equity and market asset performance using statistical momentum and volatility indicators.</p>
+            <h4 class="modal-section-h4">Analytical Capabilities & Competition Focus</h4>
             <ul style="margin-left: 20px; list-style-type: disc;">
                 <li>Computed Exponential Moving Averages (EMA), Bollinger Bands, and Sharpe Ratios.</li>
                 <li>Modeled drawdown distributions and risk-reward profile visualizations using Python & Pandas.</li>
+                <li>Advanced to the Semifinals for algorithmic rigor and quantitative financial architecture.</li>
             </ul>
         `,
-        tags: ['Python', 'Pandas', 'Quantitative Finance', 'Time Series'],
+        tags: ['Python', 'Pandas', 'Quantitative Finance', 'Time Series', 'Semifinalist'],
         github: 'https://github.com/Imashaidk/QuantEdge1.0'
     },
     'quickbite': {

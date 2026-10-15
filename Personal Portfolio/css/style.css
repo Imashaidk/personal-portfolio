@@ -444,6 +444,8 @@ button, input, textarea { font-family: inherit; border: none; outline: none; bac
 .hackathon-org { font-size: 12px; font-weight: 600; color: var(--text-secondary); }
 .hackathon-pill { font-size: 10px; font-weight: 800; text-transform: uppercase; padding: 3px 8px; border-radius: var(--radius-full); white-space: nowrap; }
 .pill-finalist { background: #000; color: #fff; }
+.pill-winner { background: #000000; color: #ffd700; border: 1px solid rgba(255, 215, 0, 0.4); box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); }
+.pill-semifinalist { background: #000000; color: #34c759; border: 1px solid rgba(52, 199, 89, 0.35); }
 .pill-organizer { background: rgba(245, 245, 247, 0.9); color: var(--text-primary); border: 1px solid var(--border-light); }
 .pill-ongoing { background: #e5e5e7; color: #1d1d1f; }
 .hackathon-desc { font-size: 13px; line-height: 1.5; color: var(--text-secondary); }
