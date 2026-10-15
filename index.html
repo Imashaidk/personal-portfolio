@@ -3,450 +3,686 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional Personal Portfolio Website of Imasha Karunathilaka - Creative Developer, Database Engineer & Strategist. Discover my work, skills, and journey.">
-    <title>Imasha Karunathilaka | Developer & Strategist</title>
-    <!-- Google Fonts: Inter -->
+    <meta name="description" content="Personal Portfolio of Imasha Karunathilaka - BSc MIT Undergraduate, University of Kelaniya. Full-Stack Developer, Business Analyst and Data Science Enthusiast.">
+    <title>Imasha Karunathilaka | Full-Stack Developer &amp; Business Analytics</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Custom CSS (Apple Studio Edition) -->
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
+    <!-- Ambient Floating Glass Orbs for Depth -->
+    <div class="glass-bg-orb orb-1"></div>
+    <div class="glass-bg-orb orb-2"></div>
+    <div class="glass-bg-orb orb-3"></div>
 
-    <!-- 1. Global Navigation Bar (Slim 44px Pure White Bar) -->
-    <header class="global-nav">
-        <div class="global-nav-container">
-            <a href="#" class="global-nav-brand">
-                <svg viewBox="0 0 170 170" width="16" height="16">
-                    <path fill="currentColor" d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.7.13-9.56-1.92-14.57-6.13-3.32-2.84-7.27-7.6-11.84-14.28-7.07-10.37-12.44-21.75-16.12-34.13-3.67-12.38-5.51-24.31-5.51-35.8 0-16.03 4.13-29.35 12.38-39.95 8.26-10.61 18.66-16.03 31.21-16.27 4.9.12 10.23 1.25 16 3.39 5.77 2.14 9.77 3.21 12 3.21 1.83 0 5.86-1.12 12.08-3.35 6.22-2.24 11.45-3.31 15.7-3.21 11.02.5 20.35 4.54 28 12.13-9.78 5.89-14.54 14.12-14.28 24.7.27 8.35 3.52 15.42 9.76 21.2 6.23 5.77 13.79 9.07 22.68 9.9-2.7 7.9-6.3 15.82-10.8 23.77zM119.22 31.06c0-6.72 2.45-13.11 7.35-18.17 4.9-5.06 10.9-8.08 18-9.06.37 1.1.55 2.23.55 3.39 0 6.64-2.52 13.06-7.56 18.27-5.04 5.21-11.09 8.16-18.15 8.85-.06-1.07-.19-2.17-.19-3.28z"/>
-                </svg>
-                <span>Imasha Karunathilaka</span>
-            </a>
-            
-            <ul class="global-nav-list">
-                <li><a href="#hero">Overview</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Timeline</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-
-            <div class="global-nav-actions">
-                <button class="global-nav-icon-btn" id="terminal-trigger" title="Interactive Terminal">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="4 17 10 11 4 5"></polyline>
-                        <line x1="12" y1="19" x2="20" y2="19"></line>
-                    </svg>
+    <header class="header" id="site-header">
+        <div class="nav-container">
+            <a href="#" class="logo" id="nav-logo"><span class="logo-accent">IK</span>&nbsp;Imasha Karunathilaka</a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="assets/Imasha_Karunathilaka_CV.pdf" download="Imasha_Karunathilaka_CV.pdf" class="nav-cv-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Download CV
+                </a>
+                <button class="terminal-trigger-btn" id="terminal-trigger" title="Open Terminal">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
                 </button>
-                <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle menu">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
+                <button class="menu-toggle-btn" id="menu-toggle" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
                 </button>
             </div>
         </div>
     </header>
-
-    <!-- 2. Sub-Nav Frosted Glass (52px Sticky Bar) -->
-    <nav class="sub-nav-frosted" id="sub-nav">
-        <div class="sub-nav-container">
-            <span class="sub-nav-title">Studio Edition</span>
-            <ul class="sub-nav-menu">
-                <li><a href="#hero">Overview</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Showcase</a></li>
-                <li><a href="#experience">Timeline</a></li>
-            </ul>
-            <a href="#contact" class="btn-primary-pill sub-nav-cta">Get In Touch</a>
-        </div>
+    <nav class="nav-drawer" id="nav-drawer">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+        <a href="#education">Education</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+        <a href="assets/Imasha_Karunathilaka_CV.pdf" download>Download CV</a>
     </nav>
-
     <main>
-        <!-- 3. Section 1: Hero Tile (White Canvas Studio) -->
-        <section class="product-tile hero-tile" id="hero">
-            <div class="tile-container">
-                <div class="eyebrow-chip">
-                    <span class="status-dot"></span> Available for Opportunities
+        <section class="section hero-section" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-header-row">
+                        <span class="hero-subtitle">Available for Opportunities</span>
+                        <div class="hero-role-pill">
+                            <span class="role-static">Specialized in</span>
+                            <span class="role-dynamic" id="role-switcher">Full-Stack Developer</span>
+                        </div>
+                    </div>
+                    <h1 class="hero-title">Building Digital<br>Systems, Mobile Apps<br>&amp; Analytics for Impact.</h1>
+                    <p class="hero-description">Hi, I'm <strong>Imasha Karunathilaka</strong> &mdash; a 2nd-year BSc (Hons) Management &amp; Information Technology undergraduate at the University of Kelaniya. I build high-performance full-stack web applications, native mobile apps, and data-driven machine learning models that bridge business strategy with technical execution.</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="assets/Imasha_Karunathilaka_CV.pdf" download="Imasha_Karunathilaka_CV.pdf" class="btn btn-secondary" style="display:inline-flex;align-items:center;gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>Download CV</a>
+                        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                        <a href="https://github.com/Imashaidk" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="display:inline-flex;align-items:center;gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>GitHub</a>
+                    </div>
                 </div>
-                <h1 class="hero-display hero-title-main">
-                    Building Digital Experiences.<br>Designed with Precision.
-                </h1>
-                <p class="lead-text hero-description-text">
-                    Software engineer & strategist building responsive web applications, high-performance database architectures, and commercial product positioning.
-                </p>
-                <div class="tile-cta-group">
-                    <a href="#projects" class="btn-primary-pill">Explore Showcase</a>
-                    <a href="#contact" class="btn-secondary-pill">Get In Touch</a>
-                </div>
-                
                 <div class="hero-visual">
-                    <!-- Studio Code Card Pedestal -->
-                    <div class="hero-code-card">
-                        <div class="card-dots">
-                            <div class="card-dots-left">
-                                <span class="dot dot-red"></span>
-                                <span class="dot dot-yellow"></span>
-                                <span class="dot dot-green"></span>
+                    <div class="hero-card-wrapper">
+                        <div class="hero-photo-glow"></div>
+                        <div class="hero-photo-card">
+                            <img src="images/imasha_profile.jpg" alt="Imasha Karunathilaka" class="hero-user-photo">
+                            <div class="hero-card-badge">
+                                <span class="badge-status-dot"></span>
+                                <div>
+                                    <strong class="badge-name">Imasha Karunathilaka</strong>
+                                    <span class="badge-uni">BSc (Hons) MIT &middot; University of Kelaniya</span>
+                                </div>
                             </div>
-                            <span class="card-filename">developer.ts</span>
                         </div>
-                        <pre><code><span class="kw">interface</span> <span class="var">Engineer</span> {
-    name: <span class="str">'Imasha Karunathilaka'</span>;
-    role: <span class="str">'Full-Stack Engineer & Business Strategist'</span>;
-    stack: [<span class="str">'TypeScript'</span>, <span class="str">'React'</span>, <span class="str">'MySQL'</span>, <span class="str">'Firebase'</span>, <span class="str">'GTM Strategy'</span>];
-    focus: <span class="str">'High Contrast UI & Modular Architectures'</span>;
-}</code></pre>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- 4. Section 2: About Tile (Pure White Canvas, Black Fonts) -->
-        <section class="product-tile" id="about">
-            <div class="tile-container">
-                <div class="eyebrow-chip">PHILOSOPHY & VISION</div>
-                <h2 class="display-lg tile-headline">Engineering systems from database to interface.</h2>
-                <p class="lead-text tile-subheadline">
-                    Combining logical database schemas with high-contrast, human-centered UI design.
-                </p>
-
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">Driven by Purpose, Built on Engineering</h2>
+                </div>
                 <div class="about-grid">
-                    <div class="about-text-column">
-                        <p class="body-text">
-                            My expertise spans full-stack web development, database modeling, UML system architecture, and commercial business analysis. I focus on developing clean, maintainable code bases that prioritize user speed and visual clarity.
-                        </p>
-                        <p class="body-text">
-                            Whether architecting relational databases or formulating go-to-market strategies for smart appliances, I ensure logical integrity and intuitive UX work seamlessly together.
-                        </p>
+                    <div class="about-info reveal">
+                        <p class="about-p text-lead">I'm a 2nd-year Management and Information Technology undergraduate at the University of Kelaniya, Faculty of Science (Department of Industrial Management), based in Kurunegala, Sri Lanka.</p>
+                        <p class="about-p">My degree uniquely combines software development, information systems, marketing, and operations management. This background shapes how I approach every project: not just <em>"does it work?"</em>, but <strong>"does it solve the right business problem?"</strong></p>
+                        <p class="about-p">I started with no strong programming background and built that up project by project &mdash; from UML-modeled systems and full-stack web applications to a 4-month machine learning sales forecasting model on real Walmart retail data, to digitizing manual workflows for an industrial machine repair workshop. Along the way I've gained hands-on experience in React 19, FastAPI, MySQL, Python/ML fundamentals, n8n workflow automation, and Android development.</p>
+                        <p class="about-p"><strong>Career Goals:</strong> I am aiming for a Business Analyst, Data Scientist, or Software Development role where I can bridge technical execution with business impact at forward-looking technology companies.</p>
                     </div>
-
-                    <div class="about-stats-column">
-                        <div class="apple-stat-card">
-                            <span class="stat-number">3+</span>
-                            <span class="stat-label">Years Engineering Experience</span>
+                    <div class="about-stats reveal">
+                        <div class="stat-card">
+                            <h3 class="stat-number">2nd</h3>
+                            <p class="stat-label">Year BSc MIT Undergraduate</p>
                         </div>
-                        <div class="apple-stat-card">
-                            <span class="stat-number">20+</span>
-                            <span class="stat-label">Projects Built & Deployed</span>
+                        <div class="stat-card">
+                            <h3 class="stat-number">9+</h3>
+                            <p class="stat-label">GitHub Repositories</p>
                         </div>
-                        <div class="apple-stat-card">
-                            <span class="stat-number">99%</span>
-                            <span class="stat-label">Client & Stakeholder Satisfaction</span>
+                        <div class="stat-card">
+                            <h3 class="stat-number">100%</h3>
+                            <p class="stat-label">Business &amp; Tech Alignment</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 5. Section 3: Skills Tile (Parchment White Accent Background) -->
-        <section class="product-tile product-tile-alt" id="skills">
-            <div class="tile-container">
-                <div class="eyebrow-chip">TECHNICAL TOOLKIT</div>
-                <h2 class="display-lg tile-headline">Designed for scale. Built for performance.</h2>
-                <p class="tile-subheadline lead-text">Core technical proficiencies across engineering & architecture.</p>
-
-                <!-- Configurator Controls -->
-                <div class="configurator-controls">
-                    <button class="configurator-chip selected" data-tab="frontend">Frontend</button>
-                    <button class="configurator-chip" data-tab="backend">Backend & Database</button>
-                    <button class="configurator-chip" data-tab="tools">Design & Strategy</button>
+        <section class="section skills-section" id="skills">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Skills &amp; Toolkit</span>
+                    <h2 class="section-title">Comprehensive Technical Stack</h2>
                 </div>
-
-                <!-- Skills Cards Grid -->
-                <div class="skills-grid-container" id="skills-container">
-                    <div class="store-utility-card">
-                        <div class="skill-card-header">
-                            <span class="skill-name">React.js & React Ecosystem</span>
-                            <span class="skill-val">88%</span>
+                <div class="skills-tabs reveal">
+                    <button class="tab-btn active" data-tab="programming">Programming &amp; Data</button>
+                    <button class="tab-btn" data-tab="frameworks">Frameworks &amp; Backend</button>
+                    <button class="tab-btn" data-tab="tools">Databases &amp; DevOps</button>
+                    <button class="tab-btn" data-tab="business">Business &amp; Analytics</button>
+                </div>
+                <div class="skills-content-container reveal">
+                    <div class="tab-content active" id="programming">
+                        <div class="skills-grid">
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">Python</span><span class="skill-category-tag">Data &amp; ML</span></div><p class="skill-desc">Exploratory data analysis, time series modeling, feature engineering, and NLP pipelines using Pandas, NumPy, Scikit-Learn.</p></div>
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">JavaScript (ES6+)</span><span class="skill-category-tag">Full-Stack</span></div><p class="skill-desc">Modern asynchronous programming, DOM manipulation, Fetch/Axios API integrations, and modular component architecture.</p></div>
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">Java &amp; Kotlin</span><span class="skill-category-tag">Mobile &amp; OOP</span></div><p class="skill-desc">Native Android development in Android Studio, object-oriented design, Coroutines, and Material UI.</p></div>
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">C++</span><span class="skill-category-tag">Core CS</span></div><p class="skill-desc">Data structures and algorithms, memory management principles, and algorithmic problem-solving.</p></div>
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">HTML5 &amp; Modern CSS3</span><span class="skill-category-tag">Frontend</span></div><p class="skill-desc">Semantic markup, responsive grid/flexbox layouts, CSS custom properties, and sleek animations.</p></div>
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">SQL</span><span class="skill-category-tag">Databases</span></div><p class="skill-desc">Complex relational querying, table joins, schema indexing, transactions, and stored procedure optimization.</p></div>
                         </div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 88%"></div></div>
                     </div>
-                    <div class="store-utility-card">
-                        <div class="skill-card-header">
-                            <span class="skill-name">HTML5 / CSS3 / Vanilla JS</span>
-                            <span class="skill-val">95%</span>
+                    <div class="tab-content" id="frameworks">
+                        <div class="skills-grid">
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">React 19 &amp; Vite</span><span class="skill-category-tag">Frontend UI</span></div><p class="skill-desc">Declarative state management, custom hooks, reusable design systems, and lightning-fast Vite bundling.</p></div>
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">FastAPI</span><span class="skill-category-tag">Python Backend</span></div><p class="skill-desc">High-performance async RESTful API design, Pydantic schema validation, and automatic OpenAPI documentation.</p></div>
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">Tailwind CSS</span><span class="skill-category-tag">Design Systems</span></div><p class="skill-desc">Custom design tokens, dark/light theme systems, responsive breakpoint utility styling, and clean UI components.</p></div>
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">Node.js &amp; Express</span><span class="skill-category-tag">Backend Services</span></div><p class="skill-desc">REST API routing, middleware architecture, database controllers, and backend server development.</p></div>
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">Socket.IO</span><span class="skill-category-tag">Real-Time</span></div><p class="skill-desc">Bi-directional WebSocket streaming, live notification broadcasts, and real-time state synchronization.</p></div>
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">JWT Auth &amp; SQLAlchemy</span><span class="skill-category-tag">Security &amp; ORM</span></div><p class="skill-desc">Stateless token authentication, password hashing (bcrypt), role-based route guards, and Python ORM modeling.</p></div>
                         </div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 95%"></div></div>
                     </div>
-                    <div class="store-utility-card">
-                        <div class="skill-card-header">
-                            <span class="skill-name">Responsive Web Design</span>
-                            <span class="skill-val">92%</span>
+                    <div class="tab-content" id="tools">
+                        <div class="skills-grid">
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">MySQL &amp; TiDB Cloud</span><span class="skill-category-tag">Relational DB</span></div><p class="skill-desc">Relational database design, cloud clustering, foreign key integrity, migrations, and performance tuning.</p></div>
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">Docker &amp; Docker Compose</span><span class="skill-category-tag">DevOps</span></div><p class="skill-desc">Multi-container application orchestration, reproducible local developer environments, and microservice networking.</p></div>
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">Git &amp; GitHub</span><span class="skill-category-tag">Version Control</span></div><p class="skill-desc">Branch workflows, CI/CD pipeline management, resolving cross-team merge conflicts, and collaborative pull requests.</p></div>
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">n8n Workflow Automation</span><span class="skill-category-tag">Integration</span></div><p class="skill-desc">Low-code workflow automation, webhook endpoints, multi-system data synchronization, and automated business triggers.</p></div>
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">Android Studio &amp; VS Code</span><span class="skill-category-tag">IDE Tooling</span></div><p class="skill-desc">Native emulator debugging, Gradle builds, Git integrations, and full-stack development toolchains.</p></div>
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">Figma &amp; Canva</span><span class="skill-category-tag">Design &amp; Branding</span></div><p class="skill-desc">Wireframing, UX user journey mapping, marketing collateral, and print-ready brochures.</p></div>
                         </div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 92%"></div></div>
                     </div>
-                    <div class="store-utility-card">
-                        <div class="skill-card-header">
-                            <span class="skill-name">Chart.js & Data Visualization</span>
-                            <span class="skill-val">85%</span>
+                    <div class="tab-content" id="business">
+                        <div class="skills-grid">
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">UML &amp; ER System Modeling</span><span class="skill-category-tag">Architecture</span></div><p class="skill-desc">Data Flow Diagrams (DFD), Sequence Diagrams, Activity Diagrams, Use Case modeling, and Entity-Relationship schemas.</p></div>
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">Business Process Analysis</span><span class="skill-category-tag">BA Mapping</span></div><p class="skill-desc">As-Is to To-Be workflow re-engineering, stakeholder requirements gathering, bottleneck identification, and system scoping.</p></div>
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">Time Series Forecasting</span><span class="skill-category-tag">Data Science</span></div><p class="skill-desc">Demand curve forecasting, rolling window statistical features, LightGBM modeling, and retail inventory optimization.</p></div>
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">Aspect-Based Sentiment (NLP)</span><span class="skill-category-tag">AI &amp; Text Mining</span></div><p class="skill-desc">Aspect extraction and fine-grained sentiment scoring on customer reviews across product hardware dimensions.</p></div>
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">Agile &amp; Scrum Practices</span><span class="skill-category-tag">Methodologies</span></div><p class="skill-desc">Sprint backlog planning, user story formulation, cross-functional collaboration, and sprint retrospectives.</p></div>
+                            <div class="skill-card"><div class="skill-header"><span class="skill-title">Marketing Strategy (7Ps)</span><span class="skill-category-tag">Commercialization</span></div><p class="skill-desc">Go-To-Market framework formulation, target positioning, market feasibility modeling, and brand launch planning.</p></div>
                         </div>
-                        <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 85%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Featured Work</span>
+                    <h2 class="section-title">My Projects &amp; Case Studies</h2>
+                    <p style="color:var(--text-secondary);margin-top:8px;font-size:0.95rem;">Click any card to read the in-depth case study &amp; problem breakdown.</p>
+                </div>
+                <div class="project-filters reveal">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="data-science">Data Science &amp; AI</button>
+                    <button class="filter-btn" data-filter="system">Systems &amp; BA</button>
+                    <button class="filter-btn" data-filter="web">Web &amp; Full-Stack</button>
+                    <button class="filter-btn" data-filter="strategy">Marketing &amp; Strategy</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                </div>
+                <div class="projects-grid reveal">
+                    <div class="project-card" data-category="data-science" data-project-id="sales-forecasting">
+                        <div class="project-img-wrapper">
+                            <span class="project-status-badge">Completed (4 Months)</span>
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Time Series Sales Forecasting ML" class="project-img" loading="lazy">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Machine Learning &amp; Data Science</span>
+                            <h3 class="project-title">Time Series Sales Forecasting (ML)</h3>
+                            <div class="project-role-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Solo Project &mdash; End-to-End ML Pipeline</div>
+                            <p class="project-desc">Self-driven 4-month predictive analytics project forecasting retail sales using the Kaggle M5 (Walmart) dataset. Built from scratch with comprehensive exploratory data analysis, time-series feature engineering, and model benchmarking.</p>
+                            <div class="project-tags"><span>Python</span><span>Machine Learning</span><span>Time Series</span><span>Pandas</span><span>Kaggle M5</span></div>
+                            <div class="project-card-footer">
+                                <button class="project-view-details-btn"><span>Read Case Study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+                                <div class="project-links"><a href="https://github.com/Imashaidk/sales-forecasting-project" target="_blank" rel="noopener noreferrer" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="system" data-project-id="machine-repair">
+                        <div class="project-img-wrapper">
+                            <span class="project-status-badge">BA Case Study &amp; System</span>
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Industrial Machine Repairing Management System" class="project-img" loading="lazy">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Systems &amp; Business Analysis</span>
+                            <h3 class="project-title">Industrial Machine Repairing Management System</h3>
+                            <div class="project-role-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line></svg>Requirements Gathering &amp; Process Mapping</div>
+                            <p class="project-desc">SDP and BA case study for a heavy-machinery workshop. Replaced a paper-based workflow with digital job intake, live tracking, auto-estimated completion dates, and costing/billing.</p>
+                            <div class="project-tags"><span>Business Analysis</span><span>As-Is/To-Be</span><span>MySQL</span><span>UML / ER Diagrams</span><span>Costing</span></div>
+                            <div class="project-card-footer">
+                                <button class="project-view-details-btn"><span>Read Case Study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+                                <div class="project-links"><a href="https://github.com/Imashaidk" target="_blank" rel="noopener noreferrer" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="web system" data-project-id="taskify">
+                        <div class="project-img-wrapper">
+                            <span class="project-status-badge">Team Project (Web Apps Dev)</span>
+                            <img src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=800&q=80" alt="Taskify Task Management System" class="project-img" loading="lazy">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Full-Stack Web Development</span>
+                            <h3 class="project-title">Taskify &mdash; Task Management System</h3>
+                            <div class="project-role-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>Frontend &amp; UI Lead (Member 4 of 5)</div>
+                            <p class="project-desc">Full-stack group project featuring real-time Socket.IO notifications, role-based task visibility, and a Stripe-inspired UI redesign across all 8 pages. Managed bug fixes, bcrypt auth, and Tailwind migration.</p>
+                            <div class="project-tags"><span>React 19</span><span>Vite</span><span>FastAPI</span><span>Tailwind CSS</span><span>MySQL (TiDB)</span><span>Docker</span><span>Socket.IO</span></div>
+                            <div class="project-card-footer">
+                                <button class="project-view-details-btn"><span>Read Case Study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+                                <div class="project-links"><a href="https://github.com/Imashaidk/task-management-system" target="_blank" rel="noopener noreferrer" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="strategy web" data-project-id="aquagrow">
+                        <div class="project-img-wrapper">
+                            <span class="project-status-badge">INCO 12.0 Showcase</span>
+                            <img src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?auto=format&fit=crop&w=800&q=80" alt="AquaGrow Indoor Hydroponic System" class="project-img" loading="lazy">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Marketing &amp; Strategy / IoT</span>
+                            <h3 class="project-title">AquaGrow &mdash; Smart Hydroponic Home System</h3>
+                            <div class="project-role-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Design, Branding &amp; Marketing Lead (Team Futurix)</div>
+                            <p class="project-desc">Smart indoor hydroponic home-growing system for INCO 12.0 National Exhibition. Spearheaded complete brand identity, product user grow manuals, brochures, and commercialization strategy.</p>
+                            <div class="project-tags"><span>Brand Identity</span><span>7Ps Strategy</span><span>IoT Hydroponics</span><span>Vercel</span><span>Canva</span><span>INCO 12.0</span></div>
+                            <div class="project-card-footer">
+                                <button class="project-view-details-btn"><span>Read Case Study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+                                <div class="project-links"><a href="https://aqua-grow-taupe.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link" title="Live Website"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="strategy system" data-project-id="ceylink">
+                        <div class="project-img-wrapper">
+                            <span class="project-status-badge">IdeaSprint 2025 Finalist</span>
+                            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80" alt="Ceylink Tea Marketplace" class="project-img" loading="lazy">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Product Strategy &amp; Digital Platform</span>
+                            <h3 class="project-title">Ceylink &mdash; Digital Tea Marketplace Platform</h3>
+                            <div class="project-role-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>IdeaSprint Finalist &amp; Core Strategist (Team Sprintbusters)</div>
+                            <p class="project-desc">A digital trade and marketplace platform connecting Sri Lankan tea growers and smallholder sellers directly with buyers, eliminating intermediary exploitation and creating transparent price discovery.</p>
+                            <div class="project-tags"><span>Digital Marketplace</span><span>Supply Chain</span><span>Venture Strategy</span><span>IdeaSprint 2025</span><span>Sprintbusters</span></div>
+                            <div class="project-card-footer">
+                                <button class="project-view-details-btn"><span>Read Case Study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+                                <div class="project-links"><a href="https://github.com/Imashaidk" target="_blank" rel="noopener noreferrer" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="data-science system" data-project-id="employee-attrition">
+                        <div class="project-img-wrapper">
+                            <span class="project-status-badge">Active Repository</span>
+                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Employee Attrition Analytics" class="project-img" loading="lazy">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Business Analytics &amp; Predictive Modeling</span>
+                            <h3 class="project-title">Employee Attrition Analytics &amp; Retention Model</h3>
+                            <div class="project-role-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>HR Predictive Model &amp; Strategy Formulation</div>
+                            <p class="project-desc">Analyzing enterprise HR workforce data to flag at-risk employees and formulate retention strategies from business case definition to predictive machine learning classification and dashboard design.</p>
+                            <div class="project-tags"><span>Python</span><span>Pandas</span><span>HR Analytics</span><span>Classification</span><span>Retention Strategy</span></div>
+                            <div class="project-card-footer">
+                                <button class="project-view-details-btn"><span>Read Case Study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+                                <div class="project-links"><a href="https://github.com/Imashaidk/employee-attrition-analytics" target="_blank" rel="noopener noreferrer" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="data-science" data-project-id="laptop-absa">
+                        <div class="project-img-wrapper">
+                            <span class="project-status-badge">In Progress</span>
+                            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="TrustSense Aspect-Based Sentiment Analysis" class="project-img" loading="lazy">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Natural Language Processing &amp; AI</span>
+                            <h3 class="project-title">TrustSense &mdash; Aspect-Based Sentiment Analysis</h3>
+                            <div class="project-role-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>NLP Feature Extraction &amp; Sentiment Modeling</div>
+                            <p class="project-desc">NLP project extracting granular sentiment by product aspect (battery life, display clarity, build quality, thermal performance) from a self-sourced dataset of 24,113 laptop reviews across 365 products.</p>
+                            <div class="project-tags"><span>Python</span><span>NLP</span><span>Pandas</span><span>Aspect Extraction</span><span>Text Mining</span></div>
+                            <div class="project-card-footer">
+                                <button class="project-view-details-btn"><span>Read Case Study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+                                <div class="project-links"><a href="https://github.com/Imashaidk/laptop-absa-project" target="_blank" rel="noopener noreferrer" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="data-science system" data-project-id="sl-delivery">
+                        <div class="project-img-wrapper">
+                            <span class="project-status-badge">Operations Analytics</span>
+                            <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=800&q=80" alt="Sri Lanka Delivery Analytics" class="project-img" loading="lazy">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Operations Analytics &amp; Logistics</span>
+                            <h3 class="project-title">Sri Lanka Delivery &amp; Logistics Analytics</h3>
+                            <div class="project-role-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>Courier Performance &amp; Dispatch Analysis</div>
+                            <p class="project-desc">Logistics operations analysis examining regional dispatch efficiency, transit delay patterns, route optimization, and operational fulfillment KPIs across Sri Lankan distribution corridors using Python.</p>
+                            <div class="project-tags"><span>Python</span><span>Pandas</span><span>Operations Research</span><span>Logistics KPI</span></div>
+                            <div class="project-card-footer">
+                                <button class="project-view-details-btn"><span>Read Case Study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+                                <div class="project-links"><a href="https://github.com/Imashaidk/SL-delivery-analytics" target="_blank" rel="noopener noreferrer" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="web" data-project-id="ecommerce">
+                        <div class="project-img-wrapper">
+                            <span class="project-status-badge">Phases 1-10 Complete</span>
+                            <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80" alt="NexGen Store E-Commerce Platform" class="project-img" loading="lazy">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Full-Stack E-Commerce</span>
+                            <h3 class="project-title">NexGen Store &mdash; Full-Stack E-Commerce</h3>
+                            <div class="project-role-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>End-to-End Architecture &amp; Database Integration</div>
+                            <p class="project-desc">A full-stack e-commerce application covering product browsing, responsive category filtering, dynamic shopping cart, and secure checkout flows with MySQL database persistence.</p>
+                            <div class="project-tags"><span>React</span><span>Node.js / Express</span><span>MySQL</span><span>XAMPP</span><span>REST APIs</span></div>
+                            <div class="project-card-footer">
+                                <button class="project-view-details-btn"><span>Read Case Study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+                                <div class="project-links"><a href="https://github.com/Imashaidk/ecommerce-app" target="_blank" rel="noopener noreferrer" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="data-science system" data-project-id="ai-support-triage">
+                        <div class="project-img-wrapper">
+                            <span class="project-status-badge">ML &amp; Operations</span>
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="AI Support Triage & SLA Engine" class="project-img" loading="lazy">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Machine Learning &amp; Agile PM</span>
+                            <h3 class="project-title">AI Support Ticket Triage &amp; SLA Engine</h3>
+                            <div class="project-role-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Agile PM &amp; Machine Learning Engineer</div>
+                            <p class="project-desc">AI support ticket triage and SLA breach prevention engine combining natural language processing, priority scoring, and Agile workflow management to optimize support desk capacity.</p>
+                            <div class="project-tags"><span>Python</span><span>NLP</span><span>Agile PM</span><span>SLA Analytics</span><span>Scikit-Learn</span></div>
+                            <div class="project-card-footer">
+                                <button class="project-view-details-btn"><span>Read Case Study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+                                <div class="project-links"><a href="https://github.com/Imashaidk/ai-support-triage-analytics" target="_blank" rel="noopener noreferrer" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="mobile" data-project-id="weather-app">
+                        <div class="project-img-wrapper">
+                            <span class="project-status-badge">Native Android</span>
+                            <img src="https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&w=800&q=80" alt="WeatherNow Native Android App" class="project-img" loading="lazy">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Native Mobile Development</span>
+                            <h3 class="project-title">WeatherNow &mdash; Native Android Weather App</h3>
+                            <div class="project-role-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>Kotlin &amp; Android Studio Developer</div>
+                            <p class="project-desc">Native Android weather application built in Kotlin leveraging OpenWeather REST APIs, Kotlin Coroutines for asynchronous data streaming, and Material 3 design system.</p>
+                            <div class="project-tags"><span>Kotlin</span><span>Android Studio</span><span>Coroutines</span><span>REST API</span><span>Material 3</span></div>
+                            <div class="project-card-footer">
+                                <button class="project-view-details-btn"><span>Read Case Study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+                                <div class="project-links"><a href="https://github.com/Imashaidk/weather-app" target="_blank" rel="noopener noreferrer" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="mobile" data-project-id="eventhub">
+                        <div class="project-img-wrapper">
+                            <span class="project-status-badge">Cross-Platform Mobile</span>
+                            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="EventHub Mobile App" class="project-img" loading="lazy">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Mobile Application Development</span>
+                            <h3 class="project-title">EventHub &mdash; Campus &amp; Tech Community App</h3>
+                            <div class="project-role-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>Flutter &amp; Dart Mobile Developer</div>
+                            <p class="project-desc">Cross-platform mobile application providing seamless event discovery, agenda scheduling, RSVP management, and category filtering for university and developer events.</p>
+                            <div class="project-tags"><span>Flutter</span><span>Dart</span><span>Mobile UI</span><span>State Management</span></div>
+                            <div class="project-card-footer">
+                                <button class="project-view-details-btn"><span>Read Case Study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+                                <div class="project-links"><a href="https://github.com/Imashaidk/EventHub" target="_blank" rel="noopener noreferrer" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="data-science" data-project-id="quantedge">
+                        <div class="project-img-wrapper">
+                            <span class="project-status-badge">Quantitative Analytics</span>
+                            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80" alt="QuantEdge 1.0 Financial Analytics" class="project-img" loading="lazy">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Quantitative &amp; FinTech Analytics</span>
+                            <h3 class="project-title">QuantEdge 1.0 &mdash; Financial Analytics Engine</h3>
+                            <div class="project-role-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>Quantitative Data Analyst</div>
+                            <p class="project-desc">Quantitative financial analytics toolkit analyzing historical asset prices, moving average momentum, risk-reward ratios, and market volatility indicators with Python &amp; Pandas.</p>
+                            <div class="project-tags"><span>Python</span><span>Pandas</span><span>Time Series</span><span>Financial Analytics</span></div>
+                            <div class="project-card-footer">
+                                <button class="project-view-details-btn"><span>Read Case Study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+                                <div class="project-links"><a href="https://github.com/Imashaidk/QuantEdge1.0" target="_blank" rel="noopener noreferrer" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="web" data-project-id="quickbite">
+                        <div class="project-img-wrapper">
+                            <span class="project-status-badge">TypeScript Web App</span>
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="QuickBite Food App" class="project-img" loading="lazy">
+                            <div class="project-img-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Interactive Web Development</span>
+                            <h3 class="project-title">QuickBite &mdash; Food Ordering Web App</h3>
+                            <div class="project-role-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>Frontend &amp; TypeScript Developer</div>
+                            <p class="project-desc">Modern food ordering web application built with TypeScript, featuring item customization, responsive checkout flow, and state-driven shopping cart management.</p>
+                            <div class="project-tags"><span>TypeScript</span><span>React</span><span>Frontend UI</span><span>State Management</span></div>
+                            <div class="project-card-footer">
+                                <button class="project-view-details-btn"><span>Read Case Study</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+                                <div class="project-links"><a href="https://github.com/Imashaidk/quickbite_app" target="_blank" rel="noopener noreferrer" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="github-callout reveal">
+                    <a href="https://github.com/Imashaidk?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding:14px 28px;font-size:1rem;display:inline-flex;align-items:center;gap:10px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <span>Explore All Repositories on GitHub (@Imashaidk)</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="section education-section" id="education">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Education</span>
+                    <h2 class="section-title">Academic Foundation</h2>
+                </div>
+                <div class="education-grid reveal">
+                    <div class="education-card">
+                        <div class="education-header">
+                            <div>
+                                <h3 class="education-degree">BSc (Hons) in Management and Information Technology</h3>
+                                <p class="education-school">University of Kelaniya &mdash; Faculty of Science, Department of Industrial Management</p>
+                            </div>
+                            <span class="education-badge">2nd Year Undergraduate</span>
+                        </div>
+                        <p class="education-desc">Pursuing a multidisciplinary degree at the intersection of business strategy and software engineering. Currently exploring specialization pathways between <strong>Business Systems Engineering</strong> and <strong>Operations &amp; Supply Chain Management</strong>, preparing for a future as a Business Analyst or Data Scientist.</p>
+                        <div class="coursework-container">
+                            <h4 class="coursework-title">Relevant Academic Coursework</h4>
+                            <div class="coursework-badges">
+                                <span class="coursework-badge">Web Applications Development</span>
+                                <span class="coursework-badge">Artificial Intelligence</span>
+                                <span class="coursework-badge">Mobile Application Development</span>
+                                <span class="coursework-badge">Information Systems Modelling</span>
+                                <span class="coursework-badge">Data Structures &amp; Algorithms</span>
+                                <span class="coursework-badge">Software Engineering Concepts</span>
+                                <span class="coursework-badge">Event-Driven Programming</span>
+                                <span class="coursework-badge">Agile &amp; DevOps</span>
+                                <span class="coursework-badge">Operations Management</span>
+                                <span class="coursework-badge">Marketing Management</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 6. Section 4: Projects Showcase Tile (Pure White Surface, Jet Black Fonts) -->
-        <section class="product-tile" id="projects">
-            <div class="tile-container">
-                <div class="eyebrow-chip">FEATURED WORK</div>
-                <h2 class="display-lg tile-headline">Featured Work & Applications.</h2>
-                <p class="tile-subheadline lead-text">Clean implementations across web, database architectures, and GTM strategy.</p>
-
-                <!-- Project Filters -->
-                <div class="configurator-controls">
-                    <button class="configurator-chip selected" data-filter="all">All Work</button>
-                    <button class="configurator-chip" data-filter="web">Web & App</button>
-                    <button class="configurator-chip" data-filter="system">Systems & Databases</button>
-                    <button class="configurator-chip" data-filter="strategy">Marketing & Strategy</button>
+        <section class="section experience-section" id="experience">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Leadership &amp; Experience</span>
+                    <h2 class="section-title">Organizing Roles &amp; Design Leadership</h2>
                 </div>
-
-                <!-- Projects Gallery Grid -->
-                <div class="projects-grid-apple" id="projects-container">
-                    <!-- Project 1 -->
-                    <div class="project-tile-card" data-category="web">
-                        <div class="project-render-wrapper">
-                            <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="100%" height="100%" fill="#ffffff" />
-                                <rect x="20" y="30" width="100" height="190" rx="8" fill="#f5f5f7" stroke="#e0e0e5" />
-                                <rect x="150" y="30" width="100" height="190" rx="8" fill="#f5f5f7" stroke="#e0e0e5" />
-                                <rect x="280" y="30" width="100" height="190" rx="8" fill="#f5f5f7" stroke="#e0e0e5" />
-                                <rect x="30" y="45" width="80" height="24" rx="4" fill="#0066cc" />
-                                <rect x="160" y="45" width="80" height="35" rx="4" fill="#e5e5ea" />
-                            </svg>
-                        </div>
-                        <div>
-                            <span class="project-category-tag">Web Development</span>
-                            <h3 class="project-card-title">TMS – Task Management System</h3>
-                            <p class="project-card-desc">Interactive frontend application for agile task tracking powered by Firebase Realtime Database state synchronization.</p>
-                            <div class="project-tags-row">
-                                <span class="tag-chip">HTML5/CSS3</span>
-                                <span class="tag-chip">JavaScript</span>
-                                <span class="tag-chip">Firebase</span>
-                            </div>
-                        </div>
-                        <div>
-                            <a href="#" class="btn-primary-pill" style="font-size: 14px; padding: 9px 18px;">View Demo</a>
+                <div class="timeline reveal">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Organizing Committee</span>
+                            <h3 class="timeline-title">Financial Coordinator &mdash; hackX 11.0</h3>
+                            <h4 class="timeline-company">IMSSA &middot; Department of Industrial Management, University of Kelaniya</h4>
+                            <p class="timeline-desc">Served on the official Organizing Committee for Sri Lanka's premier inter-university startup hackathon, hackX 11.0. Managed financial budgeting, sponsorship fund allocations, and financial coordination across multiple organizing tracks.</p>
                         </div>
                     </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-tile-card" data-category="strategy">
-                        <div class="project-render-wrapper">
-                            <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="100%" height="100%" fill="#ffffff" />
-                                <circle cx="200" cy="110" r="50" fill="#f0f7ff" stroke="#0066cc" stroke-width="2" />
-                                <path d="M175,110 L200,85 L225,110 Z" fill="#0066cc" />
-                                <rect x="140" y="175" width="120" height="16" rx="8" fill="#0066cc" />
-                            </svg>
-                        </div>
-                        <div>
-                            <span class="project-category-tag">Marketing & Strategy</span>
-                            <h3 class="project-card-title">AquaGrow Hydroponics</h3>
-                            <p class="project-card-desc">Comprehensive go-to-market strategy for a smart hydroponic appliance highlighting commercial positioning.</p>
-                            <div class="project-tags-row">
-                                <span class="tag-chip">GTM Strategy</span>
-                                <span class="tag-chip">Market Analysis</span>
-                                <span class="tag-chip">Team Futurix</span>
-                            </div>
-                        </div>
-                        <div>
-                            <a href="#" class="btn-primary-pill" style="font-size: 14px; padding: 9px 18px;">Case Study</a>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Product &amp; Strategy Lead</span>
+                            <h3 class="timeline-title">Design, Branding &amp; Marketing Lead &mdash; AquaGrow</h3>
+                            <h4 class="timeline-company">Team Futurix &middot; INCO 12.0 National Exhibition</h4>
+                            <p class="timeline-desc">Spearheaded complete brand identity (charcoal, mint green, and teal palette), product user grow manuals, gate-fold promotional brochures, social media marketing calendar, and commercialization strategy for INCO 12.0.</p>
                         </div>
                     </div>
-
-                    <!-- Project 3 -->
-                    <div class="project-tile-card" data-category="web">
-                        <div class="project-render-wrapper">
-                            <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="100%" height="100%" fill="#ffffff" />
-                                <rect x="30" y="40" width="340" height="170" rx="8" fill="#f8f8fa" stroke="#e0e0e5" />
-                                <path d="M50,160 L120,110 L190,130 L270,70 L350,100" fill="none" stroke="#0066cc" stroke-width="4" />
-                                <circle cx="270" cy="70" r="6" fill="#0066cc" />
-                            </svg>
-                        </div>
-                        <div>
-                            <span class="project-category-tag">Web Application</span>
-                            <h3 class="project-card-title">Marketing Analytics Dashboard</h3>
-                            <p class="project-card-desc">Professional 5-page analytics interface built using React, React Router, Chart.js graphs, and Vite bundles.</p>
-                            <div class="project-tags-row">
-                                <span class="tag-chip">React</span>
-                                <span class="tag-chip">Chart.js</span>
-                                <span class="tag-chip">Vite</span>
-                            </div>
-                        </div>
-                        <div>
-                            <a href="#" class="btn-primary-pill" style="font-size: 14px; padding: 9px 18px;">Live Dashboard</a>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">IdeaSprint 2025 Finalist</span>
+                            <h3 class="timeline-title">IdeaSprint Finalist &amp; Core Strategist &mdash; Ceylink</h3>
+                            <h4 class="timeline-company">Team Sprintbusters &middot; National Innovation &amp; Entrepreneurship Challenge</h4>
+                            <p class="timeline-desc">Formulated the business venture model, supply chain disintermediation strategy, and digital platform architecture for Ceylink, a digital marketplace empowering Sri Lankan tea sellers and smallholder farmers.</p>
                         </div>
                     </div>
-
-                    <!-- Project 4 -->
-                    <div class="project-tile-card" data-category="system">
-                        <div class="project-render-wrapper">
-                            <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="100%" height="100%" fill="#ffffff" />
-                                <rect x="50" y="50" width="110" height="120" rx="8" fill="#f8f8fa" stroke="#e0e0e5" />
-                                <rect x="240" y="90" width="110" height="120" rx="8" fill="#f8f8fa" stroke="#e0e0e5" />
-                                <line x1="160" y1="110" x2="240" y2="150" stroke="#0066cc" stroke-width="2" stroke-dasharray="4" />
-                            </svg>
-                        </div>
-                        <div>
-                            <span class="project-category-tag">Database & Backend</span>
-                            <h3 class="project-card-title">Attendance Management System</h3>
-                            <p class="project-card-desc">System with relational schemas, UML architecture blueprints, ER diagrams, and optimized MySQL stored procedures.</p>
-                            <div class="project-tags-row">
-                                <span class="tag-chip">MySQL</span>
-                                <span class="tag-chip">UML Design</span>
-                                <span class="tag-chip">Procedures</span>
-                            </div>
-                        </div>
-                        <div>
-                            <a href="#" class="btn-primary-pill" style="font-size: 14px; padding: 9px 18px;">View Schemas</a>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Extra-Curricular Leadership</span>
+                            <h3 class="timeline-title">Active Member &mdash; LEO Club</h3>
+                            <h4 class="timeline-company">LEO Club &middot; University of Kelaniya</h4>
+                            <p class="timeline-desc">Participating actively in community engagement, youth leadership initiatives, organizing humanitarian projects, and voluntary student service drives.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- GitHub Language Stack Chart -->
-                <div style="width: 100%; max-width: 680px; margin-top: 48px; background: #ffffff; padding: 28px; border-radius: var(--radius-xl); border: 1px solid var(--color-border-hairline); box-shadow: var(--shadow-subtle);">
-                    <h3 class="caption-strong" style="color: #000000; margin-bottom: 16px; text-align: center;">GitHub Language Stack</h3>
-                    <canvas id="githubStatsChart" height="200"></canvas>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. Section 5: Experience Timeline (White Canvas) -->
-        <section class="product-tile product-tile-alt" id="experience">
-            <div class="tile-container">
-                <div class="eyebrow-chip">TIMELINE</div>
-                <h2 class="display-lg tile-headline">Professional Journey.</h2>
-                <p class="tile-subheadline lead-text">Track record across software engineering & system design.</p>
-
-                <div class="timeline-apple">
-                    <div class="timeline-row">
-                        <div class="timeline-dot-apple"></div>
-                        <span class="timeline-date-chip">2024 – Present</span>
-                        <h3 class="timeline-item-title">Software Developer</h3>
-                        <div class="timeline-item-company">Futurix Tech Labs</div>
-                        <p class="timeline-item-desc">Design full-stack systems, compile database migrations, model data workflows, and align go-to-market strategies for smart appliances.</p>
+                <div class="hackathons-section">
+                    <div class="section-header reveal" style="margin-top:50px;margin-bottom:12px;">
+                        <span class="section-tag">Competitive Hackathons</span>
+                        <h3 class="section-title" style="font-size:1.6rem;">Hackathons &amp; Innovation Challenges</h3>
+                        <p style="color:var(--text-secondary);font-size:0.95rem;margin-top:4px;">Competitive hackathons, datathons, and ongoing innovation challenges.</p>
                     </div>
-
-                    <div class="timeline-row">
-                        <div class="timeline-dot-apple"></div>
-                        <span class="timeline-date-chip">2022 – 2024</span>
-                        <h3 class="timeline-item-title">Database Architect & Analyst</h3>
-                        <div class="timeline-item-company">Launchpad Systems</div>
-                        <p class="timeline-item-desc">Designed UML schemas and managed relational databases. Improved query response times by restructuring stored procedures.</p>
-                    </div>
-
-                    <div class="timeline-row">
-                        <div class="timeline-dot-apple"></div>
-                        <span class="timeline-date-chip">2021 – 2022</span>
-                        <h3 class="timeline-item-title">Junior Developer</h3>
-                        <div class="timeline-item-company">Academic Tech Incubator</div>
-                        <p class="timeline-item-desc">Built initial components for TMS interfaces, mapped relational databases, and coordinated layout mockups in Figma.</p>
+                    <div class="hackathons-grid reveal">
+                        <div class="hackathon-card"><div class="hackathon-header"><div><h4 class="hackathon-name">IdeaSprint 2025</h4><p class="hackathon-org">Team Sprintbusters &middot; Ceylink Platform</p></div><span class="hackathon-pill pill-finalist">Finalist</span></div><p class="hackathon-desc">Advanced as a national Finalist with Team Sprintbusters for Ceylink, a digital marketplace connecting Sri Lankan tea growers directly with buyers.</p></div>
+                        <div class="hackathon-card"><div class="hackathon-header"><div><h4 class="hackathon-name">CodeSprint 11.0</h4><p class="hackathon-org">Informatics Institute of Technology (IIT)</p></div><span class="hackathon-pill pill-finalist">Finalist</span></div><p class="hackathon-desc">Advanced as a national Finalist in Sri Lanka's prestigious inter-university hackathon, tackling complex technical problem solving under time constraints.</p></div>
+                        <div class="hackathon-card"><div class="hackathon-header"><div><h4 class="hackathon-name">INCO 12.0 Exhibition</h4><p class="hackathon-org">Team Futurix &middot; AquaGrow Project</p></div><span class="hackathon-pill pill-organizer">Showcase</span></div><p class="hackathon-desc">Developed and showcased the AquaGrow smart hydroponic home-growing product, presenting brand identity and market feasibility to industry visitors.</p></div>
+                        <div class="hackathon-card"><div class="hackathon-header"><div><h4 class="hackathon-name">NetX IoT Challenge</h4><p class="hackathon-org">IoT &amp; Embedded Systems Challenge</p></div><span class="hackathon-pill pill-ongoing">Ongoing</span></div><p class="hackathon-desc">Currently competing in the NetX IoT challenge, developing connected smart telemetry and hardware-software system integrations.</p></div>
+                        <div class="hackathon-card"><div class="hackathon-header"><div><h4 class="hackathon-name">Codesplash '26</h4><p class="hackathon-org">University Coding Competition</p></div><span class="hackathon-pill pill-ongoing">Ongoing</span></div><p class="hackathon-desc">Actively participating in algorithmic problem solving, software system architecture, and collaborative rapid prototyping.</p></div>
+                        <div class="hackathon-card"><div class="hackathon-header"><div><h4 class="hackathon-name">SLIIT CODEFEST Datathon</h4><p class="hackathon-org">SLIIT Faculty of Computing</p></div><span class="hackathon-pill pill-ongoing">Ongoing</span></div><p class="hackathon-desc">Competing in data analytics, machine learning predictive modeling, and data science challenge tracks at SLIIT CODEFEST.</p></div>
+                        <div class="hackathon-card"><div class="hackathon-header"><div><h4 class="hackathon-name">AI Buildathon</h4><p class="hackathon-org">Powered by Alibaba Cloud</p></div><span class="hackathon-pill pill-ongoing">Ongoing</span></div><p class="hackathon-desc">Building cloud-native generative AI applications and intelligent workflow systems leveraging Alibaba Cloud AI infrastructure.</p></div>
+                        <div class="hackathon-card"><div class="hackathon-header"><div><h4 class="hackathon-name">AI/ML Engineer Stage 1</h4><p class="hackathon-org">SLIIT Computing</p></div><span class="hackathon-pill pill-organizer">Certified</span></div><p class="hackathon-desc">Professional certification covering core machine learning paradigms, data preprocessing, model evaluation, and Python ML pipelines.</p></div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- 8. Section 6: Contact Tile (Clean Studio Form) -->
-        <section class="product-tile" id="contact">
-            <div class="tile-container">
-                <div class="eyebrow-chip">LET'S WORK TOGETHER</div>
-                <h2 class="display-lg tile-headline">Get In Touch.</h2>
-                <p class="tile-subheadline lead-text">Have a project idea or inquiry? Send a direct message.</p>
-
-                <div class="contact-form-container">
-                    <form id="contact-form" name="contact" method="POST" data-netlify="true" novalidate>
-                        <div class="apple-form-group">
-                            <label for="form-name" class="apple-form-label">Full Name</label>
-                            <input type="text" id="form-name" class="apple-form-input" placeholder="Imasha Karunathilaka" required>
-                            <span class="form-error" id="name-error">Please enter your name</span>
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Let's Connect</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info reveal">
+                        <h3 class="contact-subtitle">Collaboration &amp; Inquiries</h3>
+                        <p class="contact-desc">Interested in collaborating on a software project, machine learning problem, or business analysis role? Feel free to reach out directly.</p>
+                        <div class="contact-details">
+                            <a href="mailto:karunat-im23099@stu.kln.ac.lk" class="contact-detail-item">
+                                <div class="icon-box-small"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+                                <span>karunat-im23099@stu.kln.ac.lk</span>
+                            </a>
+                            <a href="tel:+94774852074" class="contact-detail-item">
+                                <div class="icon-box-small"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+                                <span>+94 77 485 2074</span>
+                            </a>
+                            <a href="https://linkedin.com/in/imasha-karunathilaka" target="_blank" rel="noopener noreferrer" class="contact-detail-item">
+                                <div class="icon-box-small"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></div>
+                                <span>linkedin.com/in/imasha-karunathilaka</span>
+                            </a>
+                            <a href="https://github.com/Imashaidk" target="_blank" rel="noopener noreferrer" class="contact-detail-item">
+                                <div class="icon-box-small"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></div>
+                                <span>github.com/Imashaidk</span>
+                            </a>
                         </div>
-
-                        <div class="apple-form-group">
-                            <label for="form-email" class="apple-form-label">Email Address</label>
-                            <input type="email" id="form-email" class="apple-form-input" placeholder="hello@imasha.dev" required>
-                            <span class="form-error" id="email-error">Please enter a valid email</span>
-                        </div>
-
-                        <div class="apple-form-group">
-                            <label for="form-subject" class="apple-form-label">Subject</label>
-                            <input type="text" id="form-subject" class="apple-form-input" placeholder="Project Inquiry" required>
-                            <span class="form-error" id="subject-error">Please enter a subject</span>
-                        </div>
-
-                        <div class="apple-form-group">
-                            <label for="form-message" class="apple-form-label">Message</label>
-                            <textarea id="form-message" class="apple-form-textarea" placeholder="Tell me about your project..." required></textarea>
-                            <span class="form-error" id="message-error">Please enter a message</span>
-                        </div>
-
-                        <button type="submit" class="btn-primary-pill" style="width: 100%; margin-top: 12px;" id="submit-btn">
-                            Send Message
-                        </button>
-                    </form>
+                    </div>
+                    <div class="contact-form-card reveal">
+                        <form id="contact-form" name="contact" method="POST" data-netlify="true" novalidate>
+                            <div class="form-group">
+                                <label for="form-name" class="form-label">Full Name</label>
+                                <input type="text" id="form-name" name="name" class="form-input" placeholder="Imasha Karunathilaka" required>
+                                <span class="form-error" id="name-error">Please enter your name</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email" class="form-label">Email Address</label>
+                                <input type="email" id="form-email" name="email" class="form-input" placeholder="hello@example.com" required>
+                                <span class="form-error" id="email-error">Please enter a valid email</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-subject" class="form-label">Subject</label>
+                                <input type="text" id="form-subject" name="subject" class="form-input" placeholder="Project Inquiry" required>
+                                <span class="form-error" id="subject-error">Please enter a subject</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message" class="form-label">Message</label>
+                                <textarea id="form-message" name="message" class="form-textarea" placeholder="Tell me about your project..." required></textarea>
+                                <span class="form-error" id="message-error">Please enter a message</span>
+                            </div>
+                            <button type="submit" class="form-submit" id="submit-btn">Send Message</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- 9. Footer (Parchment Footnote Grid) -->
-    <footer class="apple-footer">
+    <footer class="footer">
         <div class="footer-inner">
-            <div class="footer-nav-grid">
+            <div class="footer-top">
                 <div>
-                    <h4 class="footer-col-title">Navigation</h4>
-                    <ul class="footer-links-list">
-                        <li><a href="#hero">Overview</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#experience">Timeline</a></li>
-                    </ul>
+                    <div class="footer-brand-name">Imasha Karunathilaka</div>
+                    <p class="footer-brand-desc">BSc MIT Undergraduate &middot; University of Kelaniya<br>Full-Stack Developer &amp; Business Analyst<br>Kurunegala, Sri Lanka</p>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">Navigate</h4>
+                    <div class="footer-links">
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#education">Education</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#contact">Contact</a>
+                    </div>
                 </div>
                 <div>
                     <h4 class="footer-col-title">Connect</h4>
-                    <ul class="footer-links-list">
-                        <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
-                        <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
-                        <li><a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a></li>
-                        <li><a href="mailto:hello@imasha.dev">Email</a></li>
-                    </ul>
+                    <div class="footer-links">
+                        <a href="https://github.com/Imashaidk" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://linkedin.com/in/imasha-karunathilaka" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="mailto:karunat-im23099@stu.kln.ac.lk">Email</a>
+                        <a href="assets/Imasha_Karunathilaka_CV.pdf" download>Download CV</a>
+                    </div>
                 </div>
                 <div>
-                    <h4 class="footer-col-title">Location</h4>
-                    <ul class="footer-links-list">
-                        <li><span style="line-height: 2.41; color: #424245;">Colombo, Sri Lanka</span></li>
-                        <li><span style="line-height: 2.41; color: #424245;">Available Worldwide</span></li>
-                    </ul>
+                    <h4 class="footer-col-title">Interests</h4>
+                    <div class="footer-links">
+                        <a href="#projects">Data Science</a>
+                        <a href="#projects">Full-Stack Dev</a>
+                        <a href="#projects">Business Analysis</a>
+                        <a href="#projects">Mobile Apps</a>
+                    </div>
                 </div>
             </div>
-
-            <div class="footer-legal-bar">
-                <div>Copyright &copy; 2026 Imasha Karunathilaka. All rights reserved.</div>
-                <div>Designed in accordance with Apple Studio Web Specifications.</div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Imasha Karunathilaka. All rights reserved.</p>
+                <p class="footer-copyright">Crafted with precision &middot; Kurunegala, Sri Lanka</p>
             </div>
         </div>
     </footer>
 
-    <!-- Interactive Terminal Easter Egg Window -->
+    <!-- Project Case Study Modal Overlay -->
+    <div class="project-modal-overlay hidden" id="project-modal">
+        <div class="project-modal-card">
+            <button class="project-modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+            <div class="project-modal-header">
+                <span class="project-modal-badge" id="modal-badge">Case Study</span>
+                <h2 class="project-modal-title" id="modal-title">Project Title</h2>
+                <div class="project-modal-role" id="modal-role">Role</div>
+            </div>
+            <div class="project-modal-body" id="modal-body">
+                <!-- Dynamic Content injected via JS -->
+            </div>
+            <div class="project-modal-footer">
+                <div class="project-modal-tags" id="modal-tags"></div>
+                <div class="project-modal-actions" id="modal-actions"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terminal Easter Egg -->
     <div class="terminal-overlay hidden" id="terminal-overlay">
         <div class="terminal-window">
             <div class="terminal-header">
-                <span style="width: 10px; height: 10px; border-radius: 50%; background: #ff5f56; cursor: pointer;" id="terminal-close"></span>
-                <span style="width: 10px; height: 10px; border-radius: 50%; background: #ffbd2e;"></span>
-                <span style="width: 10px; height: 10px; border-radius: 50%; background: #27c93f;"></span>
-                <div class="terminal-title">imasha@apple-studio:~</div>
+                <span style="width:12px;height:12px;border-radius:50%;background:#ff5f56;cursor:pointer;" id="terminal-close"></span>
+                <span style="width:12px;height:12px;border-radius:50%;background:#ffbd2e;"></span>
+                <span style="width:12px;height:12px;border-radius:50%;background:#27c93f;"></span>
+                <div class="terminal-title">imasha@portfolio ~ zsh</div>
             </div>
             <div class="terminal-body" id="terminal-body">
-                <div><span class="terminal-prompt">guest@portfolio:~$</span> Welcome to Imasha's terminal. Type 'help' for available commands.</div>
+                <div><span class="terminal-prompt">guest@portfolio:~$</span> Welcome. Type 'help' for available commands.</div>
             </div>
             <div class="terminal-input-line">
                 <span class="terminal-prompt">guest@portfolio:~$</span>
@@ -455,7 +691,6 @@
         </div>
     </div>
 
-    <!-- Custom JS -->
     <script src="js/app.js"></script>
 </body>
 </html>
