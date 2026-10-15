@@ -48,11 +48,11 @@ function initRoleSwitcher() {
     if (!el) return;
 
     const roles = [
+        'Data Science & AI/ML Enthusiast',
+        'Business Analyst',
+        'Project Manager & Agile Lead',
         'Full-Stack Developer',
-        'Business Systems Analyst',
-        'Machine Learning & AI',
-        'Mobile Apps (Kotlin & Flutter)',
-        'Workflow Automation'
+        'Time Series & Predictive Analytics'
     ];
     let index = 0;
 
@@ -214,6 +214,56 @@ function init3DTilt() {
 
 /* --- Interactive Project Modal (Case Study Detail Drawer) --- */
 const PROJECT_CASE_STUDIES = {
+    'nexora-carbonpulse': {
+        badge: 'Merit Award · CodeFest Finals 2026',
+        title: 'Nexora CarbonPulse — Enterprise Climate Risk Intelligence & Decision Suite',
+        role: 'Data Science & Business Analysis Lead (Team Nexora)',
+        body: `
+            <p class="about-p">Nexora CarbonPulse is an award-winning enterprise climate analytics and decision intelligence platform developed for the National Finals of SLIIT CodeFest Datathon 2026, earning the prestigious Merit Award.</p>
+            <h4 class="modal-section-h4">Key Architecture & Analytical Modules</h4>
+            <ul style="margin-left: 20px; list-style-type: disc;">
+                <li><strong>Carbon Market Forecasting:</strong> 30-day forward price curve prediction across 5 compliance carbon markets (EU ETS, UK ETS, California, China ETS, RGGI) using autoregressive LightGBM regressor pipelines with zero data leakage.</li>
+                <li><strong>Sovereign Transition Velocity Index:</strong> Multi-dimensional scoring (Score A) evaluating 27 years of sovereign energy transition and emissions intensity across 50 nations (2000-2026).</li>
+                <li><strong>EU CBAM Regulatory Financial Engine:</strong> Real-time cross-border carbon border tax liability calculator and supply chain tariff hedging simulator.</li>
+                <li><strong>Production Deployment:</strong> Full-stack Streamlit decision application with interactive digital twin policy simulations ($R^2 = 0.967$).</li>
+            </ul>
+        `,
+        tags: ['Data Science', 'Machine Learning', 'LightGBM', 'EU CBAM', 'Streamlit', 'Merit Award'],
+        github: 'https://github.com/praveen-madawalage/nexora-final-challenge',
+        live: 'https://nexora-final-challenge-eklrszup3jypkheffvchph.streamlit.app/'
+    },
+    'nexora-forecaster': {
+        badge: 'Time Series ML Benchmark',
+        title: 'Nexora Carbon Price Forecaster (Autoregressive ML)',
+        role: 'Time Series ML & Econometric Modeler',
+        body: `
+            <p class="about-p">Autoregressive time-series predictive modeling engine analyzing 15,866 daily carbon trading observations to forecast 30-day forward compliance prices across 5 major global carbon exchanges.</p>
+            <h4 class="modal-section-h4">Machine Learning Methodology</h4>
+            <ul style="margin-left: 20px; list-style-type: disc;">
+                <li>Engineered strict 1-day shifted rolling statistics (7-day, 30-day volatility standard deviations) and cyclical calendar signals.</li>
+                <li>Rigorous evaluation comparing classical ARIMA baselines against tuned LightGBM regressor pipelines on held-out test horizons.</li>
+                <li>Quantified market volatility shocks and predictive MAPE/RMSE benchmarks across multiple geographical compliance zones.</li>
+            </ul>
+        `,
+        tags: ['Python', 'Time Series', 'LightGBM', 'ARIMA', 'Zero-Leakage ML'],
+        github: 'https://github.com/praveen-madawalage/nexora-final-challenge'
+    },
+    'nexora-cbam': {
+        badge: 'Regulatory FinTech & BA',
+        title: 'Nexora EU CBAM Border Carbon Liability & Tariff Engine',
+        role: 'Business Analyst & Quantitative Risk Modeler',
+        body: `
+            <p class="about-p">Quantitative compliance decision model designed for corporate supply chain leaders and procurement desks navigating European Union Carbon Border Adjustment Mechanism (EU CBAM) regulations.</p>
+            <h4 class="modal-section-h4">Business Analysis & Risk Mechanics</h4>
+            <ul style="margin-left: 20px; list-style-type: disc;">
+                <li>Formulated mathematical models for import carbon certificate requirements across industrial sectors (steel, aluminum, cement, fertilizers).</li>
+                <li>Computed sovereign electricity grid decarbonization transition velocity metrics across 50 exporting partner economies.</li>
+                <li>Designed an intuitive interactive decision layer allowing enterprise risk managers to stress-test tariff liabilities against forward carbon price swings.</li>
+            </ul>
+        `,
+        tags: ['Business Analysis', 'EU CBAM', 'Financial Risk', 'Python', 'Streamlit'],
+        github: 'https://github.com/praveen-madawalage/nexora-final-challenge'
+    },
     'sales-forecasting': {
         badge: 'Machine Learning Case Study',
         title: 'Time Series Retail Sales Forecasting',
@@ -470,11 +520,11 @@ function initProjectModal() {
                 }
 
                 if (modalActions) {
-                    modalActions.innerHTML = `
-                        <a href="${data.github}" target="_blank" rel="noopener" class="btn btn-primary" style="padding:8px 20px;font-size:13px;">
-                            View Source on GitHub
-                        </a>
-                    `;
+                    let actionHtml = `<a href="${data.github}" target="_blank" rel="noopener" class="btn btn-outline" style="padding:8px 18px;font-size:13px;">View Source on GitHub</a>`;
+                    if (data.live) {
+                        actionHtml = `<a href="${data.live}" target="_blank" rel="noopener" class="btn btn-primary" style="padding:8px 18px;font-size:13px;display:inline-flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>View Live Application</a> ` + actionHtml;
+                    }
+                    modalActions.innerHTML = actionHtml;
                 }
 
                 modal.classList.remove('hidden');
